@@ -1,6 +1,7 @@
-import { generateSVGFont, GlyphMetadata } from './generateFont';
+import { generateSVGFont } from './generateFont';
 import JSZip from 'jszip';
 import { UnicodeMap, generateUnicodeMap } from './generateUnicode';
+import { exportSVGsToZip } from './exportSvg';
 
 figma.showUI(__html__, { width: 400, height: 200 });
 
@@ -68,31 +69,11 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
       figma.notify('Preparing font file...');
       const zip = new JSZip();
 
-      // Export SVGs and collect glyph data
-      const glyphsData = await Promise.all(children.map(async (node) => {
-        try {
-          const svg = await node.exportAsync({
-            format: 'SVG',
-            svgOutlineText: true,
-            svgIdAttribute: true
-          });
-
-          const name = node.name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-          const svgString = Array.from(svg).map(byte => String.fromCharCode(byte)).join('');
-
-          return {
-            name,
-            unicode: unicodeMap[name].unitRight.replace('&#x', '').replace(';', ''),
-            svg: svgString
-          };
-        } catch (error) {
-          console.error(`Failed to export ${node.name}:`, error);
-          return null;
-        }
-      }));
+      // Export SVGs and collect glyph data using the utility function
+      const glyphsData = await exportSVGsToZip(children, unicodeMap, zip);
 
       // Generate single SVG font file
-      const svgFont = await generateSVGFont(glyphsData.filter(Boolean) as GlyphMetadata[]);
+      const svgFont = await generateSVGFont(glyphsData);
 
       // Add font and map to zip
       zip.file('iconsMaster.svg', svgFont);
