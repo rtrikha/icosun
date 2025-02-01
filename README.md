@@ -4,8 +4,7 @@
 </p>
 
 <h3>What is Icosun?</h3>
-<p>Icosun is an open sourced replacement for Icomoon. Its a tool that allows you to convert SVG icons into a web font. It ensures icons are scalable, accessible, and efficient for web and app development</p><br>
-
+<p>Icosun is an open sourced replacement for Icomoon. Its a tool that allows you to convert SVG icons into a web font. It ensures icons are scalable, accessible, and efficient for web and app development</p>
 
 <h3>What does the plugin export?</h3>
 <ul>
