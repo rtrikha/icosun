@@ -1,5 +1,4 @@
 import { UnicodeMap } from './generateUnicode';
-import JSZip from 'jszip';
 
 export interface SVGExportData {
     name: string;
@@ -29,13 +28,10 @@ export async function exportSVGFromNode(node: SceneNode, unicodeMap: UnicodeMap)
     }
 }
 
-export async function exportSVGsToZip(nodes: SceneNode[], unicodeMap: UnicodeMap, zip: JSZip): Promise<SVGExportData[]> {
+export async function exportSVGsToZip(nodes: SceneNode[], unicodeMap: UnicodeMap): Promise<SVGExportData[]> {
     const glyphsData = await Promise.all(
         nodes.map(async (node) => {
             const data = await exportSVGFromNode(node, unicodeMap);
-            if (data) {
-                zip.file(`svg/${data.name}.svg`, data.svg);
-            }
             return data;
         })
     );

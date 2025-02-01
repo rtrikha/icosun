@@ -1,7 +1,8 @@
 import { generateSVGFont } from './generateFont';
-import JSZip from 'jszip';
-import { UnicodeMap, generateUnicodeMap } from './generateUnicode';
-import { exportSVGsToZip } from './exportSvg';
+import { generateUnicodeMap, UnicodeMap } from './generateUnicode';
+import { exportSVGsToZip, SVGExportData } from './exportSvg';
+import { createIconsZip } from './zipUtils';
+import { generateTTF } from './fontUtils';
 
 figma.showUI(__html__, { width: 400, height: 200 });
 
@@ -19,6 +20,17 @@ function getDirectChildren(node: BaseNode): SceneNode[] {
     }
   }
   return [];
+}
+
+async function generateFontFromGlyphs(glyphsData: SVGExportData[]): Promise<{ svg: string; ttf: Uint8Array }> {
+  const svgFont = await generateSVGFont(glyphsData);
+
+  const ttfFont = generateTTF(svgFont);
+
+  return {
+    svg: svgFont,
+    ttf: ttfFont
+  };
 }
 
 function updateSelectedNodeCount() {
@@ -67,25 +79,12 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
       });
 
       figma.notify('Preparing font file...');
-      const zip = new JSZip();
 
-      // Export SVGs and collect glyph data using the utility function
-      const glyphsData = await exportSVGsToZip(children, unicodeMap, zip);
+      const glyphsData = await exportSVGsToZip(children, unicodeMap);
 
-      // Generate single SVG font file
-      const svgFont = await generateSVGFont(glyphsData);
+      const { svg, ttf } = await generateFontFromGlyphs(glyphsData);
 
-      // Add font and map to zip
-      zip.file('iconsMaster.svg', svgFont);
-      zip.file('iconMap.json', JSON.stringify(unicodeMap, null, 2));
-
-      const zipContent = await zip.generateAsync({
-        type: 'base64',
-        compression: 'DEFLATE',
-        compressionOptions: {
-          level: 9
-        }
-      });
+      const zipContent = await createIconsZip(svg, unicodeMap, glyphsData, ttf);
 
       figma.ui.postMessage({
         type: 'download-ready',
