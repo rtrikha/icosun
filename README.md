@@ -15,5 +15,5 @@
 
 <h3>How does the plugin work?</h3>
 <p align="left">
-<img width="60%" margin="0 auto" src="https://github.com/user-attachments/assets/018f4ef5-dada-43bc-9511-9dc18b09c9d3">
+<img width="60%" margin="0 auto" src="https://github.com/user-attachments/assets/71cb1081-943e-4cc1-91b9-b8b3bcd92ad4">
 </p>
