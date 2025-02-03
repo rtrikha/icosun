@@ -47,10 +47,13 @@
 	},
 	"dependencies": {
 		"@types/svg2ttf": "^5.0.3",
+		"@types/ttf2woff": "^2.0.4",
 		"fs": "^0.0.1-security",
 		"jszip": "^3.10.1",
 		"path": "^0.12.7",
 		"svg2ttf": "^6.0.3",
-		"svgicons2svgfont": "^15.0.0"
+		"svgicons2svgfont": "^15.0.0",
+		"ttf2woff": "^3.0.0",
+		"ttf2woff2": "^6.0.1"
 	}
 }

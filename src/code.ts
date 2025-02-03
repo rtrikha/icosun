@@ -16,7 +16,33 @@ interface PluginMessage {
 function getDirectChildren(node: BaseNode): SceneNode[] {
   if ('children' in node) {
     if (node.type === 'FRAME' || node.type === 'GROUP' || node.type === 'PAGE') {
-      return [...node.children];
+      const children = [...node.children];
+      let expandedChildren: SceneNode[] = [];
+
+      children.forEach(child => {
+        if (child.type === 'COMPONENT_SET') {
+          expandedChildren = expandedChildren.concat([...child.children]);
+        } else {
+          expandedChildren.push(child);
+        }
+      });
+
+      const instances = expandedChildren.filter(child => child.type === 'INSTANCE');
+      const components = expandedChildren.filter(child => child.type === 'COMPONENT');
+
+      if (instances.length > 0 || components.length > 0) {
+        console.log('Found instances:', instances.map(instance => instance.name));
+        console.log('Found components:', components.map(component => component.name));
+
+      }
+
+      return expandedChildren;
+    } else if (node.type === 'COMPONENT' || node.type === 'COMPONENT_SET') {
+      if (node.type === 'COMPONENT_SET') {
+        return [...node.children];
+      }
+      const children = [...node.children];
+      return children;
     }
   }
   return [];
