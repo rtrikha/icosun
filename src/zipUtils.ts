@@ -4,6 +4,35 @@ import { SVGExportData } from './exportSvg';
 
 const SVG_FOLDER_NAME = 'SVGs';
 
+interface ExportedUnicodeMap {
+    [key: string]: {
+        unit: string;
+    };
+}
+
+function generateTypeScriptMap(map: UnicodeMap): string {
+    const lines = ['export const IconUnicode = {'];
+
+    for (const [key, value] of Object.entries(map)) {
+        const constName = key.toUpperCase();
+        lines.push(`  ${constName}: '"\\${value.unit}"',`);
+    }
+
+    lines.push('} as const;');
+    lines.push('');
+    return lines.join('\n');
+}
+
+function simplifyUnicodeMap(map: UnicodeMap): ExportedUnicodeMap {
+    const simplified: ExportedUnicodeMap = {};
+    for (const [key, value] of Object.entries(map)) {
+        simplified[key] = {
+            unit: value.unit
+        };
+    }
+    return simplified;
+}
+
 export async function createIconsZip(
     svgFont: string,
     unicodeMap: UnicodeMap,
@@ -18,7 +47,8 @@ export async function createIconsZip(
 
     zip.file('iconsMaster.svg', svgFont);
     zip.file('iconsMaster.ttf', ttfFont);
-    zip.file('iconMap.json', JSON.stringify(unicodeMap, null, 2));
+    zip.file('iconMap.json', JSON.stringify(simplifyUnicodeMap(unicodeMap), null, 2));
+    zip.file('iconUnicode.ts', generateTypeScriptMap(unicodeMap));
 
     const zipContent = await zip.generateAsync({
         type: 'base64',
