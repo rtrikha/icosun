@@ -10,7 +10,8 @@
 <li><b>Font File</b> - A TTF file that you can directly use in your repo to use icons from</li>
 <li><b>Source SVGs</b> - All the raw SVGs from which rest of the files are created</li>
 <li><b>Combined SVG</b> - A final SVGs which becomes the input for the font file</li>
-<li><b>Unicode Map</b> - A HashMap similar that is the mapping between your SVGs and icon names using unicodes</li>
+<li><b>JSON Unicode Map</b> - A HashMap similar that is the mapping between your SVGs and icon names using unicodes in JSON format</li>
+<li><b>TS Unicode Map</b> - A HashMap similar that is the mapping between your SVGs and icon names using unicodes exported as TS constants</li>
 </ul></br>
 
 <h3>How does the plugin work?</h3>
