@@ -5,6 +5,13 @@ export interface UnicodeMap {
     };
 }
 
+function toTitleCase(str: string): string {
+    return str
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join('-');
+}
+
 export function generateUnicodeMap(nodeNames: string[]): UnicodeMap {
     const startCode = 0xECCD;
     const map: UnicodeMap = {};
@@ -12,7 +19,7 @@ export function generateUnicodeMap(nodeNames: string[]): UnicodeMap {
     nodeNames.forEach((name, index) => {
         const code = startCode + index;
         const hex = code.toString(16).toLowerCase();
-        const sanitizedName = name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+        const sanitizedName = toTitleCase(name.replace(/[^a-z0-9]/gi, '-'));
 
         map[sanitizedName] = {
             unit: hex,

@@ -34,8 +34,10 @@ function extractPathData(svgString: string): { path: string, width: number, heig
         paths.push(match[1]);
     }
 
+    const combinedPath = paths.join(' ');
+
     return {
-        path: paths.join(' '),
+        path: combinedPath,
         width: width || 24,
         height: height || 24
     };

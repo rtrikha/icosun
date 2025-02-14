@@ -6,6 +6,13 @@ export interface SVGExportData {
     svg: string;
 }
 
+function toTitleCase(str: string): string {
+    return str
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join('-');
+}
+
 export async function exportSVGFromNode(node: SceneNode, unicodeMap: UnicodeMap): Promise<SVGExportData | null> {
     try {
         const svg = await node.exportAsync({
@@ -14,7 +21,7 @@ export async function exportSVGFromNode(node: SceneNode, unicodeMap: UnicodeMap)
             svgIdAttribute: true
         });
 
-        const name = node.name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+        const name = toTitleCase(node.name.replace(/[^a-z0-9]/gi, '-'));
         const svgString = Array.from(svg).map(byte => String.fromCharCode(byte)).join('');
 
         return {

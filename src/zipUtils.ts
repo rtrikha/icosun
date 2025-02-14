@@ -1,8 +1,10 @@
 import JSZip from 'jszip';
 import { UnicodeMap } from './generateUnicode';
 import { SVGExportData } from './exportSvg';
+import { FontFormats } from './fontUtils';
 
 const SVG_FOLDER_NAME = 'SVGs';
+const FONTS_FOLDER_NAME = 'fonts';
 
 interface ExportedUnicodeMap {
     [key: string]: {
@@ -37,7 +39,7 @@ export async function createIconsZip(
     svgFont: string,
     unicodeMap: UnicodeMap,
     glyphsData: SVGExportData[],
-    ttfFont: Uint8Array
+    fonts: FontFormats
 ): Promise<string> {
     const zip = new JSZip();
 
@@ -46,7 +48,10 @@ export async function createIconsZip(
     });
 
     zip.file('iconsMaster.svg', svgFont);
-    zip.file('iconsMaster.ttf', ttfFont);
+
+    zip.file(`${FONTS_FOLDER_NAME}/iconsMaster.ttf`, fonts.ttf);
+    zip.file(`${FONTS_FOLDER_NAME}/iconsMaster.woff2`, fonts.woff2);
+
     zip.file('iconMap.json', JSON.stringify(simplifyUnicodeMap(unicodeMap), null, 2));
     zip.file('iconUnicode.ts', generateTypeScriptMap(unicodeMap));
 
