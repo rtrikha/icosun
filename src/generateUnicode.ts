@@ -5,26 +5,41 @@ export interface UnicodeMap {
     };
 }
 
-function toTitleCase(str: string): string {
+function processName(str: string): string {
     return str
-        .split('-')
+        .split(/[-_]/)
         .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-        .join('-');
+        .join('_');
 }
 
 export function generateUnicodeMap(nodeNames: string[]): UnicodeMap {
-    const startCode = 0xECCD;
-    const map: UnicodeMap = {};
+    const unicodeMap: UnicodeMap = {};
+    const unicodeStart = 0xECCD;
+    const nameCount: { [key: string]: number } = {};
+    const duplicateTracker: { original: string, processed: string }[] = [];
 
     nodeNames.forEach((name, index) => {
-        const code = startCode + index;
-        const hex = code.toString(16).toLowerCase();
-        const sanitizedName = toTitleCase(name.replace(/[^a-z0-9]/gi, '-'));
+        let processedName = processName(name.replace(/[^a-z0-9_]/gi, '_'));
 
-        map[sanitizedName] = {
-            unit: hex,
-            unitRight: `&#x${hex};`
+        if (processedName in nameCount) {
+            nameCount[processedName]++;
+            const originalProcessed = processedName;
+            processedName = `${processedName}_${nameCount[processedName]}`;
+            duplicateTracker.push({
+                original: name,
+                processed: originalProcessed
+            });
+        } else {
+            nameCount[processedName] = 0;
+        }
+
+        const unicode = (unicodeStart + index).toString(16);
+
+        unicodeMap[processedName] = {
+            unit: unicode,
+            unitRight: `&#x${unicode};`
         };
     });
-    return map;
+
+    return unicodeMap;
 }

@@ -6,39 +6,54 @@ export interface SVGExportData {
     svg: string;
 }
 
-function toTitleCase(str: string): string {
+function processName(str: string): string {
     return str
-        .split('-')
+        .split(/[-_]/)
         .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-        .join('-');
+        .join('_');
 }
 
-export async function exportSVGFromNode(node: SceneNode, unicodeMap: UnicodeMap): Promise<SVGExportData | null> {
+export interface ExportNodeInfo {
+    node: SceneNode;
+    exportName: string;
+}
+
+export async function exportSVGFromNode(nodeInfo: ExportNodeInfo, unicodeMap: UnicodeMap): Promise<SVGExportData | null> {
     try {
-        const svg = await node.exportAsync({
+        const svg = await nodeInfo.node.exportAsync({
             format: 'SVG',
             svgOutlineText: true,
             svgIdAttribute: true
         });
 
-        const name = toTitleCase(node.name.replace(/[^a-z0-9]/gi, '-'));
+        const name = processName(nodeInfo.exportName.replace(/[^a-z0-9_]/gi, '_'));
+
+        if (!unicodeMap[name]) {
+            return null;
+        }
+
         const svgString = Array.from(svg).map(byte => String.fromCharCode(byte)).join('');
+
+        if (!unicodeMap[name].unitRight) {
+            return null;
+        }
+
+        const unicode = unicodeMap[name].unitRight.replace('&#x', '').replace(';', '');
 
         return {
             name,
-            unicode: unicodeMap[name].unitRight.replace('&#x', '').replace(';', ''),
+            unicode,
             svg: svgString
         };
     } catch (error) {
-        console.error(`Failed to export ${node.name}:`, error);
         return null;
     }
 }
 
-export async function exportSVGsToZip(nodes: SceneNode[], unicodeMap: UnicodeMap): Promise<SVGExportData[]> {
+export async function exportSVGsToZip(nodes: ExportNodeInfo[], unicodeMap: UnicodeMap): Promise<SVGExportData[]> {
     const glyphsData = await Promise.all(
-        nodes.map(async (node) => {
-            const data = await exportSVGFromNode(node, unicodeMap);
+        nodes.map(async (nodeInfo) => {
+            const data = await exportSVGFromNode(nodeInfo, unicodeMap);
             return data;
         })
     );

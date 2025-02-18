@@ -1,62 +1,104 @@
 import { generateSVGFont } from './generateFont';
 import { generateUnicodeMap, UnicodeMap } from './generateUnicode';
-import { exportSVGsToZip, SVGExportData } from './exportSvg';
+import { exportSVGsToZip, SVGExportData, ExportNodeInfo } from './exportSvg';
 import { createIconsZip } from './zipUtils';
 import { generateTTF, generateWOFF2, FontFormats } from './fontUtils';
+import { checkForDuplicates, createNameTracker, DuplicateInfo } from './duplicateCheck';
 
 figma.showUI(__html__, { width: 400, height: 200 });
 
 interface PluginMessage {
-  type: 'export-children-as-svg' | 'update-count' | 'download-ready' | 'initial-count';
+  type: 'export-children-as-svg' | 'update-count' | 'download-ready' | 'initial-count' | 'export-error';
   count?: number;
   content?: string;
   unicodeMap?: UnicodeMap;
+  message?: string;
 }
 
-function getDirectChildren(node: BaseNode): SceneNode[] {
+type NodeWithExportName = ExportNodeInfo;
+
+function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], duplicates: DuplicateInfo[] } {
   if ('children' in node) {
     if (node.type === 'FRAME' || node.type === 'GROUP' || node.type === 'PAGE') {
-      const children = [...node.children];
-      const expandedChildren: SceneNode[] = [];
+      const expandedChildren: NodeWithExportName[] = [];
+      const nameTracker = createNameTracker();
 
-      children.forEach(child => {
+      node.children.forEach(child => {
         if (child.type === 'COMPONENT_SET') {
-          const variants = [...child.children];
-          variants.forEach(variant => {
-            if (variant.type === 'COMPONENT') {
-              const variantClone = variant.clone();
-              const baseComponentName = child.name;
-              const variantProperties = variant.variantProperties;
-              const variantSuffix = Object.entries(variantProperties || {})
-                .map(([_key, value]) => `${value}`)
-                .join('-');
-              variantClone.name = `${baseComponentName}-${variantSuffix}`;
-              expandedChildren.push(variantClone);
+          const baseComponentName = child.name;
+          checkForDuplicates(baseComponentName, nameTracker);
+
+          child.children.forEach(variant => {
+            if (variant.type === 'COMPONENT' && variant.visible) {
+              let variantSuffix = '';
+
+              try {
+                const variantProperties = variant.variantProperties;
+                if (variantProperties) {
+                  variantSuffix = Object.entries(variantProperties)
+                    .map(([_key, value]) => `${value}`)
+                    .join('_');
+                }
+              } catch (variantError) {
+                variantSuffix = `variant_${child.children.indexOf(variant)}`;
+              }
+
+              const exportName = variantSuffix ? `${baseComponentName}_${variantSuffix}` : baseComponentName;
+              expandedChildren.push({ node: variant, exportName });
             }
           });
-        } else {
-          expandedChildren.push(child);
+        } else if (child.visible) {
+          const exportName = child.name;
+          checkForDuplicates(exportName, nameTracker);
+          expandedChildren.push({ node: child, exportName });
         }
       });
 
-      const instances = expandedChildren.filter(child => child.type === 'INSTANCE');
-      const components = expandedChildren.filter(child => child.type === 'COMPONENT');
-
-      if (instances.length > 0 || components.length > 0) {
-        console.log('Found instances:', instances.map(instance => instance.name));
-        console.log('Found components:', components.map(component => component.name));
-      }
-
-      return expandedChildren;
+      return {
+        children: expandedChildren,
+        duplicates: nameTracker.duplicates
+      };
     } else if (node.type === 'COMPONENT' || node.type === 'COMPONENT_SET') {
       if (node.type === 'COMPONENT_SET') {
-        return [...node.children];
+        const children: NodeWithExportName[] = [];
+        const baseComponentName = node.name;
+
+        node.children.forEach(variant => {
+          if (variant.type === 'COMPONENT' && variant.visible) {
+            let variantSuffix = '';
+
+            try {
+              const variantProperties = variant.variantProperties;
+              if (variantProperties) {
+                variantSuffix = Object.entries(variantProperties)
+                  .map(([_key, value]) => `${value}`)
+                  .join('_');
+              }
+            } catch (variantError) {
+              variantSuffix = `variant_${node.children.indexOf(variant)}`;
+            }
+
+            const exportName = variantSuffix ? `${baseComponentName}_${variantSuffix}` : baseComponentName;
+            children.push({ node: variant, exportName });
+          }
+        });
+
+        return {
+          children,
+          duplicates: []
+        };
+      } else {
+        return {
+          children: [{ node: node as SceneNode, exportName: node.name }],
+          duplicates: []
+        };
       }
-      const children = [...node.children];
-      return children;
     }
   }
-  return [];
+  return {
+    children: [],
+    duplicates: []
+  };
 }
 
 async function generateFontFromGlyphs(glyphsData: SVGExportData[]): Promise<{ svg: string; fonts: FontFormats }> {
@@ -77,11 +119,11 @@ async function generateFontFromGlyphs(glyphsData: SVGExportData[]): Promise<{ sv
 
 function updateSelectedNodeCount() {
   const selectedNode = figma.currentPage.selection[0];
-  const children = selectedNode ? getDirectChildren(selectedNode) : [];
-  const count = children.length;
+  const result = selectedNode ? getDirectChildren(selectedNode) : { children: [], duplicates: [] };
+  const count = result.children.length;
 
   if (count > 0) {
-    const nodeNames = children.map(node => node.name);
+    const nodeNames = result.children.map(item => item.exportName);
     const unicodeMap = generateUnicodeMap(nodeNames);
 
     figma.ui.postMessage({
@@ -111,8 +153,23 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
     }
 
     try {
-      const children = getDirectChildren(selectedNode);
-      const nodeNames = children.map(node => node.name);
+      const { children, duplicates } = getDirectChildren(selectedNode);
+
+      if (duplicates.length > 0) {
+        const duplicateList = duplicates
+          .map(d => d.name)
+          .join(', ');
+
+        figma.notify(`⚠️ Duplicate names found: ${duplicateList}. Please fix before exporting.`, { timeout: 10000 });
+
+        figma.ui.postMessage({
+          type: 'export-error',
+          message: 'Duplicate names found'
+        });
+        return;
+      }
+
+      const nodeNames = children.map(item => item.exportName);
       const unicodeMap = generateUnicodeMap(nodeNames);
 
       figma.ui.postMessage({
@@ -133,8 +190,8 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
 
       figma.notify(`Successfully generated fonts with ${children.length} glyphs`);
     } catch (error) {
-      console.error('Export failed:', error);
-      figma.notify('Export failed. Check console for details.');
+      console.error('Export error:', error);
+      figma.notify('Export failed. Please try again.');
     }
   }
 };

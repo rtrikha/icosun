@@ -16,8 +16,8 @@ function generateTypeScriptMap(map: UnicodeMap): string {
     const lines = ['export const IconUnicode = {'];
 
     for (const [key, value] of Object.entries(map)) {
-        const constName = key.toUpperCase();
-        lines.push(`  ${constName}: '"\\${value.unit}"',`);
+        const constName = key.toUpperCase().replace(/-/g, '_');
+        lines.push(`  ${constName}: '"\\\\${value.unit}"',`);
     }
 
     lines.push('} as const;');

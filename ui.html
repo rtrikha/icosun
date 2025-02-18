@@ -41,6 +41,7 @@
 		display: flex;
 		align-items: center;
 		padding: 12px 16px;
+		position: relative;
 	}
 
 	button:hover {
@@ -64,6 +65,41 @@
 
 	button svg {
 		margin-right: 6px;
+	}
+
+	.spinner {
+		display: none;
+		width: 12px;
+		height: 12px;
+		margin-right: 6px;
+		border: 2.5px solid #653d05;
+		border-radius: 50%;
+		border-top-color: transparent;
+		animation: spin 1s linear infinite;
+		position: absolute;
+		left: 16px;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	button.loading .spinner {
+		display: block;
+	}
+
+	button.loading svg {
+		visibility: hidden;
+	}
+
+	button.loading {
+		cursor: wait;
+	}
+
+	button.loading:hover {
+		background-color: #fe9b11;
 	}
 </style>
 
@@ -98,13 +134,14 @@
 </div>
 <button id="export-button">
 	<div class="button-content">
+		<div class="spinner"></div>
 		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M3.5 2C2.67157 2 2 2.67157 2 3.5V6C2 6.82843 2.67157 7.5 3.5 7.5H6C6.82843 7.5 7.5 6.82843 7.5 6V3.5C7.5 2.67157 6.82843 2 6 2H3.5Z" fill="#653D05" />
 			<path d="M3.5 8.5C2.67157 8.5 2 9.17157 2 10V12.5C2 13.3284 2.67157 14 3.5 14H6C6.82843 14 7.5 13.3284 7.5 12.5V10C7.5 9.17157 6.82843 8.5 6 8.5H3.5Z" fill="#653D05" />
 			<path d="M10 8.5C9.17157 8.5 8.5 9.17157 8.5 10V12.5C8.5 13.3284 9.17157 14 10 14H12.5C13.3284 14 14 13.3284 14 12.5V10C14 9.17157 13.3284 8.5 12.5 8.5H10Z" fill="#653D05" />
 			<path d="M9 5.25V4.25H10.75V2.5H11.75V4.25H13.5V5.25H11.75V7H10.75V5.25H9Z" fill="#653D05" />
 		</svg>
-		Generate new set
+		<span class="button-text">Generate new set</span>
 	</div>
 	<div id="count">Select the iconMaster</div>
 </button>
@@ -113,9 +150,13 @@
 <script>
 	const statusEl = document.getElementById('status');
 	const countEl = document.getElementById('count');
+	const exportButton = document.getElementById('export-button');
+	const buttonText = exportButton.querySelector('.button-text');
 
 	// Handle button click
-	document.getElementById('export-button').onclick = () => {
+	exportButton.onclick = () => {
+		exportButton.classList.add('loading');
+		buttonText.textContent = 'Generating new set';
 		statusEl.textContent = 'Scanning for child nodes...';
 		parent.postMessage(
 			{
@@ -141,6 +182,13 @@
 			statusEl.textContent = `Found ${message.count} nodes to export...`;
 		}
 
+		if (message.type === 'export-error') {
+			// Reset loading state
+			exportButton.classList.remove('loading');
+			buttonText.textContent = 'Generate new set';
+			statusEl.textContent = '';
+		}
+
 		if (message.type === 'download-ready') {
 			statusEl.textContent = 'Creating download...';
 
@@ -154,8 +202,10 @@
 			link.click();
 			document.body.removeChild(link);
 
-			// Update status
+			// Update status and remove loading state
 			statusEl.textContent = 'Download complete!';
+			exportButton.classList.remove('loading');
+			buttonText.textContent = 'Generate new set';
 		}
 	};
 </script>
