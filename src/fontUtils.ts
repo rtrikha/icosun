@@ -6,6 +6,19 @@ export function generateTTF(svgFont: string): Uint8Array {
     return new Uint8Array(ttf.buffer);
 }
 
+export function generateOTF(ttfBuffer: Uint8Array): Uint8Array {
+    try {
+        const arrayBuffer = ttfBuffer.buffer;
+        const font = parse(arrayBuffer) as Font;
+        const otfArrayBuffer = font.toArrayBuffer();
+
+        return new Uint8Array(otfArrayBuffer);
+    } catch (error) {
+        console.error('OTF conversion failed:', error);
+        throw error;
+    }
+}
+
 export function generateWOFF2(ttfBuffer: Uint8Array): Uint8Array {
     try {
         const arrayBuffer = ttfBuffer.buffer;
@@ -22,5 +35,6 @@ export function generateWOFF2(ttfBuffer: Uint8Array): Uint8Array {
 
 export interface FontFormats {
     ttf: Uint8Array;
+    otf: Uint8Array;
     woff2: Uint8Array;
 } 

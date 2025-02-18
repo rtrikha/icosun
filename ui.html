@@ -35,6 +35,7 @@
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
+		transition: opacity 0.2s ease-in-out;
 	}
 
 	.button-content {
@@ -44,8 +45,8 @@
 		position: relative;
 	}
 
-	button:hover {
-		background-color: #ef9210;
+	button:not([disabled]):hover {
+		background-color: #e08300;
 	}
 
 	#status {
@@ -152,9 +153,14 @@
 	const countEl = document.getElementById('count');
 	const exportButton = document.getElementById('export-button');
 	const buttonText = exportButton.querySelector('.button-text');
+	let hasSelection = false;
 
 	// Handle button click
 	exportButton.onclick = () => {
+		if (!hasSelection) {
+			figma.notify('Please select a node first');
+			return;
+		}
 		exportButton.classList.add('loading');
 		buttonText.textContent = 'Generating new set';
 		statusEl.textContent = 'Scanning for child nodes...';
@@ -166,15 +172,18 @@
 		);
 	};
 
-	// Handle messages from the plugin code
 	onmessage = (event) => {
 		const message = event.data.pluginMessage;
 
 		if (message.type === 'initial-count') {
-			if (message.count > 0) {
+			hasSelection = message.count > 0;
+			if (hasSelection) {
 				countEl.textContent = `${message.count} icons`;
+				exportButton.style.opacity = '1';
+				exportButton.style.cursor = 'pointer';
 			} else {
 				countEl.textContent = 'Select an artboard';
+				exportButton.style.cursor = 'not-allowed';
 			}
 		}
 

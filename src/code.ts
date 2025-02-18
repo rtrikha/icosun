@@ -2,7 +2,7 @@ import { generateSVGFont } from './generateFont';
 import { generateUnicodeMap, UnicodeMap } from './generateUnicode';
 import { exportSVGsToZip, SVGExportData, ExportNodeInfo } from './exportSvg';
 import { createIconsZip } from './zipUtils';
-import { generateTTF, generateWOFF2, FontFormats } from './fontUtils';
+import { generateTTF, generateWOFF2, generateOTF, FontFormats } from './fontUtils';
 import { checkForDuplicates, createNameTracker, DuplicateInfo } from './duplicateCheck';
 
 figma.showUI(__html__, { width: 400, height: 200 });
@@ -104,10 +104,12 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
 async function generateFontFromGlyphs(glyphsData: SVGExportData[]): Promise<{ svg: string; fonts: FontFormats }> {
   const svgFont = await generateSVGFont(glyphsData);
   const ttf = generateTTF(svgFont);
+  const otf = generateOTF(ttf);
   const woff2 = generateWOFF2(ttf);
 
   const fonts: FontFormats = {
     ttf,
+    otf,
     woff2
   };
 
