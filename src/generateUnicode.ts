@@ -15,24 +15,9 @@ function processName(str: string): string {
 export function generateUnicodeMap(nodeNames: string[]): UnicodeMap {
     const unicodeMap: UnicodeMap = {};
     const unicodeStart = 0xECCD;
-    const nameCount: { [key: string]: number } = {};
-    const duplicateTracker: { original: string, processed: string }[] = [];
 
     nodeNames.forEach((name, index) => {
-        let processedName = processName(name.replace(/[^a-z0-9_]/gi, '_'));
-
-        if (processedName in nameCount) {
-            nameCount[processedName]++;
-            const originalProcessed = processedName;
-            processedName = `${processedName}_${nameCount[processedName]}`;
-            duplicateTracker.push({
-                original: name,
-                processed: originalProcessed
-            });
-        } else {
-            nameCount[processedName] = 0;
-        }
-
+        const processedName = processName(name.replace(/[^a-z0-9_]/gi, '_'));
         const unicode = (unicodeStart + index).toString(16);
 
         unicodeMap[processedName] = {
