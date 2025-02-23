@@ -4,18 +4,24 @@ import { exportSVGsToZip, SVGExportData, ExportNodeInfo } from './exportSvg';
 import { createIconsZip } from './zipUtils';
 import { generateTTF, generateWOFF2, generateOTF, generateWOFF, FontFormats } from './fontUtils';
 import { checkForDuplicates, createNameTracker, DuplicateInfo } from './duplicateCheck';
+import { logGlyphSvg } from './svgLogger';
 
-figma.showUI(__html__, { width: 400, height: 200 });
+figma.showUI(__html__, { width: 440, height: 200 });
 
 interface PluginMessage {
-  type: 'export-children-as-svg' | 'update-count' | 'download-ready' | 'initial-count' | 'export-error';
+  type: 'export-children-as-svg' | 'update-count' | 'download-ready' | 'initial-count' | 'export-error' | 'analyze-svg';
   count?: number;
   content?: string;
   unicodeMap?: UnicodeMap;
   message?: string;
+  targetName?: string;
 }
 
 type NodeWithExportName = ExportNodeInfo;
+
+function formatVariantName(str: string): string {
+  return str.replace(/[=\s]+/g, '_').replace(/[^\w_]/g, '');
+}
 
 function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], duplicates: DuplicateInfo[] } {
   if ('children' in node) {
@@ -25,7 +31,7 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
 
       node.children.forEach(child => {
         if (child.type === 'COMPONENT_SET') {
-          const baseComponentName = child.name;
+          const baseComponentName = formatVariantName(child.name);
           checkForDuplicates(baseComponentName, nameTracker);
 
           child.children.forEach(variant => {
@@ -36,7 +42,7 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
                 const variantProperties = variant.variantProperties;
                 if (variantProperties) {
                   variantSuffix = Object.entries(variantProperties)
-                    .map(([_key, value]) => `${value}`)
+                    .map(([_key, value]) => formatVariantName(value))
                     .join('_');
                 }
               } catch (variantError) {
@@ -48,7 +54,7 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
             }
           });
         } else if (child.visible) {
-          const exportName = child.name;
+          const exportName = formatVariantName(child.name);
           checkForDuplicates(exportName, nameTracker);
           expandedChildren.push({ node: child, exportName });
         }
@@ -61,7 +67,7 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
     } else if (node.type === 'COMPONENT' || node.type === 'COMPONENT_SET') {
       if (node.type === 'COMPONENT_SET') {
         const children: NodeWithExportName[] = [];
-        const baseComponentName = node.name;
+        const baseComponentName = formatVariantName(node.name);
 
         node.children.forEach(variant => {
           if (variant.type === 'COMPONENT' && variant.visible) {
@@ -71,7 +77,7 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
               const variantProperties = variant.variantProperties;
               if (variantProperties) {
                 variantSuffix = Object.entries(variantProperties)
-                  .map(([_key, value]) => `${value}`)
+                  .map(([_key, value]) => formatVariantName(value))
                   .join('_');
               }
             } catch (variantError) {
@@ -89,7 +95,7 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
         };
       } else {
         return {
-          children: [{ node: node as SceneNode, exportName: node.name }],
+          children: [{ node: node as SceneNode, exportName: formatVariantName(node.name) }],
           duplicates: []
         };
       }
@@ -100,6 +106,8 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
     duplicates: []
   };
 }
+
+export { getDirectChildren };
 
 async function generateFontFromGlyphs(glyphsData: SVGExportData[]): Promise<{ svg: string; fonts: FontFormats }> {
   const svgFont = await generateSVGFont(glyphsData);
@@ -133,12 +141,14 @@ function updateSelectedNodeCount() {
     figma.ui.postMessage({
       type: 'initial-count',
       count: count,
-      unicodeMap: unicodeMap
+      unicodeMap: unicodeMap,
+      enableAnalyze: count === 1 // Only enable analyze when exactly one child
     });
   } else {
     figma.ui.postMessage({
       type: 'initial-count',
-      count: 0
+      count: 0,
+      enableAnalyze: false
     });
   }
 }
@@ -148,7 +158,34 @@ figma.on('selectionchange', updateSelectedNodeCount);
 updateSelectedNodeCount();
 
 figma.ui.onmessage = async (msg: PluginMessage) => {
-  if (msg.type === 'export-children-as-svg') {
+  if (msg.type === 'analyze-svg') {
+    const selectedNode = figma.currentPage.selection[0];
+    if (!selectedNode) {
+      figma.notify('Please select a node first');
+      return;
+    }
+
+    try {
+      const { children } = getDirectChildren(selectedNode);
+      if (children.length === 0) {
+        figma.notify('No valid children found');
+        return;
+      }
+
+      const nodeNames = children.map(item => item.exportName);
+      const unicodeMap = generateUnicodeMap(nodeNames);
+      const glyphsData = await exportSVGsToZip(children, unicodeMap);
+      const { svg } = await generateFontFromGlyphs(glyphsData);
+
+      // Generate SVG analysis for the first child
+      logGlyphSvg(svg, children[0].exportName);
+
+      figma.notify('SVG analysis complete');
+    } catch (error) {
+      console.error('SVG analysis error:', error);
+      figma.notify('SVG analysis failed');
+    }
+  } else if (msg.type === 'export-children-as-svg') {
     const selectedNode = figma.currentPage.selection[0];
 
     if (!selectedNode) {
@@ -185,6 +222,8 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
 
       const glyphsData = await exportSVGsToZip(children, unicodeMap);
       const { svg, fonts } = await generateFontFromGlyphs(glyphsData);
+
+      // Remove SVG analysis from export handler
       const zipContent = await createIconsZip(svg, unicodeMap, glyphsData, fonts);
 
       figma.ui.postMessage({
