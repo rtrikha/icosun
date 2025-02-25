@@ -251,7 +251,7 @@ function getPathDirection(path: string): number {
     return area;
 }
 
-export const logGlyphSvg = (svgFontData: string, targetName: string): void => {
+export const logGlyphSvg = (svgFontData: string, targetName: string, parentName: string): void => {
     try {
         const processedName = processName(targetName);
 
@@ -271,34 +271,49 @@ export const logGlyphSvg = (svgFontData: string, targetName: string): void => {
         }
 
         const glyphElement = glyphMatch[0];
-
         const pathMatch = glyphElement.match(/d="([^"]+)"/);
-        const unicodeMatch = glyphElement.match(/unicode="([^"]+)"/);
-
         const pathData = pathMatch ? pathMatch[1] : 'No path data found';
-        const unicode = unicodeMatch ? unicodeMatch[1] : 'No unicode found';
-
         const subpaths = pathData.split(/(?=[Mm])/).filter(Boolean);
 
-        console.log('Glyph found:', processedName);
-        console.log('Unicode:', unicode);
-        console.log('\nPath Analysis:');
-        console.log('Number of subpaths:', subpaths.length);
+        // Get the source node from current selection
+        const sourceNode = figma.currentPage.selection[0];
 
+        // Create and position the frame
         const frame = figma.createFrame();
-        frame.name = `${processedName}_Analysis`;
-        frame.resize(24, 24);
-        frame.x = figma.viewport.center.x;
-        frame.y = figma.viewport.center.y;
-        frame.fills = [{ type: 'SOLID', color: { r: 1, g: 1, b: 1 } }];
+        frame.name = `${parentName}-Analysis`;
+        frame.resizeWithoutConstraints(24, 24);
 
-        const pathsInfo: PathInfo[] = subpaths.map((subpath, index) => {
+        // Position the frame based on the node type
+        if (sourceNode) {
+            if (sourceNode.type === 'COMPONENT_SET' || sourceNode.type === 'INSTANCE' || sourceNode.type === 'COMPONENT') {
+                // For component sets, position relative to the component set's bounds
+                const bounds = sourceNode.absoluteBoundingBox;
+                if (bounds) {
+                    frame.x = bounds.x + bounds.width + 8;
+                    frame.y = bounds.y;
+                }
+            } else {
+                // For all other node types, use the node's position directly
+                frame.x = sourceNode.x + sourceNode.width + 8;
+                frame.y = sourceNode.y;
+            }
+        }
+
+        frame.fills = [{ type: 'SOLID', color: { r: 1, g: 1, b: 1 } }];
+        frame.layoutMode = 'HORIZONTAL';
+        frame.primaryAxisAlignItems = 'CENTER';
+        frame.counterAxisAlignItems = 'CENTER';
+        frame.layoutSizingHorizontal = 'FIXED';
+        frame.layoutSizingVertical = 'FIXED';
+        frame.paddingLeft = 0;
+        frame.paddingRight = 0;
+        frame.paddingTop = 0;
+        frame.paddingBottom = 0;
+        frame.itemSpacing = 0;
+
+        const pathsInfo: PathInfo[] = subpaths.map((subpath) => {
             const direction = getPathDirection(subpath);
             const isClockwise = direction > 0;
-
-            console.log(`\nSubpath ${index + 1}:`);
-            console.log(`Direction: ${isClockwise ? 'Clockwise (Additive)' : 'Counter-clockwise (Subtractive)'}`);
-            console.log(`Path: ${subpath.trim()}`);
 
             return {
                 data: subpath.trim(),

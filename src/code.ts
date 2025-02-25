@@ -64,7 +64,7 @@ function getDirectChildren(node: BaseNode): { children: NodeWithExportName[], du
         children: expandedChildren,
         duplicates: nameTracker.duplicates
       };
-    } else if (node.type === 'COMPONENT' || node.type === 'COMPONENT_SET') {
+    } else if (node.type === 'COMPONENT' || node.type === 'COMPONENT_SET' || node.type === 'INSTANCE') {
       if (node.type === 'COMPONENT_SET') {
         const children: NodeWithExportName[] = [];
         const baseComponentName = formatVariantName(node.name);
@@ -142,7 +142,11 @@ function updateSelectedNodeCount() {
       type: 'initial-count',
       count: count,
       unicodeMap: unicodeMap,
-      enableAnalyze: count === 1 // Only enable analyze when exactly one child
+      enableAnalyze: selectedNode.type === 'FRAME' ||
+        selectedNode.type === 'GROUP' ||
+        selectedNode.type === 'COMPONENT' ||
+        selectedNode.type === 'INSTANCE' ||
+        count === 1
     });
   } else {
     figma.ui.postMessage({
@@ -166,19 +170,45 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
     }
 
     try {
-      const { children } = getDirectChildren(selectedNode);
-      if (children.length === 0) {
-        figma.notify('No valid children found');
-        return;
+      let nodeToAnalyze: NodeWithExportName;
+
+      if (selectedNode.type === 'COMPONENT' || selectedNode.type === 'INSTANCE') {
+        // Handle single component or instance directly
+        nodeToAnalyze = {
+          node: selectedNode,
+          exportName: formatVariantName(selectedNode.name)
+        };
+      } else {
+        // Handle frame/group with children
+        const { children } = getDirectChildren(selectedNode);
+        if (children.length === 0) {
+          figma.notify('No valid children found');
+          return;
+        }
+        nodeToAnalyze = children[0];
+
+        if (selectedNode.type === 'FRAME' || selectedNode.type === 'GROUP') {
+          figma.notify('Make sure the shapes are union before analyzing', { timeout: 10000 });
+        }
       }
 
-      const nodeNames = children.map(item => item.exportName);
+      // Create a single-item array for processing
+      const nodes = [nodeToAnalyze];
+      const nodeNames = nodes.map(item => item.exportName);
       const unicodeMap = generateUnicodeMap(nodeNames);
-      const glyphsData = await exportSVGsToZip(children, unicodeMap);
+      const glyphsData = await exportSVGsToZip(nodes, unicodeMap);
       const { svg } = await generateFontFromGlyphs(glyphsData);
 
-      // Generate SVG analysis for the first child
-      logGlyphSvg(svg, children[0].exportName);
+      // Get the parent name based on the node type
+      let parentName = selectedNode.name;
+      if (selectedNode.type === 'INSTANCE') {
+        const mainComponent = await (selectedNode as InstanceNode).getMainComponentAsync();
+        if (mainComponent) {
+          parentName = mainComponent.name;
+        }
+      }
+
+      logGlyphSvg(svg, nodeToAnalyze.exportName, parentName);
 
       figma.notify('SVG analysis complete');
     } catch (error) {
