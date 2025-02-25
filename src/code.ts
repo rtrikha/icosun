@@ -232,8 +232,7 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
           .map(d => d.name)
           .join(', ');
 
-        figma.notify(` Duplicate names found: ${duplicateList}. Please fix before exporting.`, {
-          timeout: 2000,
+        figma.notify(` Duplicate names found: ${duplicateList}. Please make sure there are no duplicate names before exporting`, {
           error: true
         });
 
@@ -247,15 +246,18 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
       const nodeNames = children.map(item => item.exportName);
       const unicodeMap = generateUnicodeMap(nodeNames);
 
+      figma.notify('✅ Unicode mapping complete', { timeout: 1000 });
+
       figma.ui.postMessage({
         type: 'update-count',
         count: children.length
       });
 
-      figma.notify('Preparing font files...');
-
       const glyphsData = await exportSVGsToZip(children, unicodeMap);
+      figma.notify('✅ SVG files generated', { timeout: 1000 });
+
       const { svg, fonts } = await generateFontFromGlyphs(glyphsData);
+      figma.notify('✅ Font file generated', { timeout: 1000 });
 
       const zipContent = await createIconsZip(svg, unicodeMap, glyphsData, fonts);
 
@@ -264,7 +266,9 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
         content: zipContent
       });
 
-      figma.notify(`Successfully generated fonts with ${children.length} glyphs`);
+      figma.notify(` 🎊 Successfully generated font files with ${children.length} icons`, {
+        timeout: Infinity,
+      });
     } catch (error) {
       console.error('Export error:', error);
       figma.notify('Export failed. Please try again.');
