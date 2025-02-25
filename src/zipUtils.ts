@@ -53,6 +53,7 @@ export async function createIconsZip(
     zip.file(`${FONTS_FOLDER_NAME}/iconsMaster.otf`, fonts.otf);
     zip.file(`${FONTS_FOLDER_NAME}/iconsMaster.woff`, fonts.woff);
     zip.file(`${FONTS_FOLDER_NAME}/iconsMaster.woff2`, fonts.woff2);
+    zip.file(`${FONTS_FOLDER_NAME}/iconsMaster.eot`, fonts.eot);
 
     zip.file('iconMap.json', JSON.stringify(simplifyUnicodeMap(unicodeMap), null, 2));
     zip.file('iconUnicode.ts', generateTypeScriptMap(unicodeMap));

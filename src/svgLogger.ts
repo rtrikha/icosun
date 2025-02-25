@@ -275,25 +275,20 @@ export const logGlyphSvg = (svgFontData: string, targetName: string, parentName:
         const pathData = pathMatch ? pathMatch[1] : 'No path data found';
         const subpaths = pathData.split(/(?=[Mm])/).filter(Boolean);
 
-        // Get the source node from current selection
         const sourceNode = figma.currentPage.selection[0];
 
-        // Create and position the frame
         const frame = figma.createFrame();
         frame.name = `${parentName}-Analysis`;
         frame.resizeWithoutConstraints(24, 24);
 
-        // Position the frame based on the node type
         if (sourceNode) {
             if (sourceNode.type === 'COMPONENT_SET' || sourceNode.type === 'INSTANCE' || sourceNode.type === 'COMPONENT') {
-                // For component sets, position relative to the component set's bounds
                 const bounds = sourceNode.absoluteBoundingBox;
                 if (bounds) {
                     frame.x = bounds.x + bounds.width + 8;
                     frame.y = bounds.y;
                 }
             } else {
-                // For all other node types, use the node's position directly
                 frame.x = sourceNode.x + sourceNode.width + 8;
                 frame.y = sourceNode.y;
             }

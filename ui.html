@@ -237,7 +237,6 @@
 	const buttonText = exportButton.querySelector('.button-text');
 	let hasSelection = false;
 
-	// Handle button click
 	exportButton.onclick = () => {
 		if (!hasSelection) {
 			figma.notify('Please select a node first');
@@ -284,7 +283,6 @@
 		}
 
 		if (message.type === 'export-error') {
-			// Reset loading state
 			exportButton.classList.remove('loading');
 			buttonText.textContent = 'Generate new set';
 			statusEl.textContent = '';
@@ -293,17 +291,14 @@
 		if (message.type === 'download-ready') {
 			statusEl.textContent = 'Creating download...';
 
-			// Create download link
 			const link = document.createElement('a');
 			link.href = 'data:application/zip;base64,' + message.content;
 			link.download = 'iconsMaster.zip';
 
-			// Trigger download
 			document.body.appendChild(link);
 			link.click();
 			document.body.removeChild(link);
 
-			// Update status and remove loading state
 			statusEl.textContent = 'Download complete!';
 			exportButton.classList.remove('loading');
 			buttonText.textContent = 'Generate new set';

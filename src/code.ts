@@ -2,7 +2,7 @@ import { generateSVGFont } from './generateFont';
 import { generateUnicodeMap, UnicodeMap } from './generateUnicode';
 import { exportSVGsToZip, SVGExportData, ExportNodeInfo } from './exportSvg';
 import { createIconsZip } from './zipUtils';
-import { generateTTF, generateWOFF2, generateOTF, generateWOFF, FontFormats } from './fontUtils';
+import { generateTTF, generateWOFF2, generateOTF, generateWOFF, generateEOT, FontFormats } from './fontUtils';
 import { checkForDuplicates, createNameTracker, DuplicateInfo } from './duplicateCheck';
 import { logGlyphSvg } from './svgLogger';
 
@@ -111,16 +111,21 @@ export { getDirectChildren };
 
 async function generateFontFromGlyphs(glyphsData: SVGExportData[]): Promise<{ svg: string; fonts: FontFormats }> {
   const svgFont = await generateSVGFont(glyphsData);
-  const ttf = generateTTF(svgFont);
-  const otf = generateOTF(ttf);
-  const woff = generateWOFF(ttf);
-  const woff2 = generateWOFF2(ttf);
+  const ttf = await generateTTF(svgFont);
+
+  const [otf, woff, woff2, eot] = await Promise.all([
+    generateOTF(ttf),
+    generateWOFF(ttf),
+    generateWOFF2(ttf),
+    generateEOT(ttf)
+  ]);
 
   const fonts: FontFormats = {
     ttf,
     otf,
     woff,
-    woff2
+    woff2,
+    eot
   };
 
   return {
@@ -173,13 +178,11 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
       let nodeToAnalyze: NodeWithExportName;
 
       if (selectedNode.type === 'COMPONENT' || selectedNode.type === 'INSTANCE') {
-        // Handle single component or instance directly
         nodeToAnalyze = {
           node: selectedNode,
           exportName: formatVariantName(selectedNode.name)
         };
       } else {
-        // Handle frame/group with children
         const { children } = getDirectChildren(selectedNode);
         if (children.length === 0) {
           figma.notify('No valid children found');
@@ -192,14 +195,12 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
         }
       }
 
-      // Create a single-item array for processing
       const nodes = [nodeToAnalyze];
       const nodeNames = nodes.map(item => item.exportName);
       const unicodeMap = generateUnicodeMap(nodeNames);
       const glyphsData = await exportSVGsToZip(nodes, unicodeMap);
       const { svg } = await generateFontFromGlyphs(glyphsData);
 
-      // Get the parent name based on the node type
       let parentName = selectedNode.name;
       if (selectedNode.type === 'INSTANCE') {
         const mainComponent = await (selectedNode as InstanceNode).getMainComponentAsync();
@@ -231,7 +232,10 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
           .map(d => d.name)
           .join(', ');
 
-        figma.notify(`⚠️ Duplicate names found: ${duplicateList}. Please fix before exporting.`, { timeout: 10000 });
+        figma.notify(` Duplicate names found: ${duplicateList}. Please fix before exporting.`, {
+          timeout: 2000,
+          error: true
+        });
 
         figma.ui.postMessage({
           type: 'export-error',
@@ -253,7 +257,6 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
       const glyphsData = await exportSVGsToZip(children, unicodeMap);
       const { svg, fonts } = await generateFontFromGlyphs(glyphsData);
 
-      // Remove SVG analysis from export handler
       const zipContent = await createIconsZip(svg, unicodeMap, glyphsData, fonts);
 
       figma.ui.postMessage({
