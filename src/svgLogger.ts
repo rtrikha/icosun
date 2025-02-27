@@ -294,7 +294,7 @@ export const logGlyphSvg = (svgFontData: string, targetName: string, parentName:
             }
         }
 
-        frame.fills = [{ type: 'SOLID', color: { r: 1, g: 1, b: 1 } }];
+        frame.fills = [{ type: 'SOLID', color: { r: 0, g: 1, b: 1 } }];
         frame.layoutMode = 'HORIZONTAL';
         frame.primaryAxisAlignItems = 'CENTER';
         frame.counterAxisAlignItems = 'CENTER';
@@ -305,6 +305,10 @@ export const logGlyphSvg = (svgFontData: string, targetName: string, parentName:
         frame.paddingTop = 0;
         frame.paddingBottom = 0;
         frame.itemSpacing = 0;
+        frame.backgrounds = [{
+            type: 'SOLID',
+            color: { r: 1, g: 1, b: 1 }
+        }];
 
         const pathsInfo: PathInfo[] = subpaths.map((subpath) => {
             const direction = getPathDirection(subpath);
@@ -320,6 +324,10 @@ export const logGlyphSvg = (svgFontData: string, targetName: string, parentName:
             pathsInfo,
             `${processedName}_Compound`
         );
+        compoundVector.fills = [{
+            type: 'SOLID',
+            color: { r: 37 / 255, g: 37 / 255, b: 40 / 255 }
+        }];
         frame.appendChild(compoundVector);
 
         figma.currentPage.selection = [frame];
