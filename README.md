@@ -1,6 +1,6 @@
-<p align="center">
-<img width="20%" margin="0 auto" alt="icoSunLogo" src="https://github.com/user-attachments/assets/6753973c-1e67-451f-a9a4-a31542401187">
-</p>
+<p align="left">
+<img width="8%" alt="icoSunLogo" src="https://github.com/user-attachments/assets/02dc825e-98e6-4c67-a676-f379f72e8132">
+</br></br>
 
 <h3>What is Icosun?</h3>
 <p>Icosun is an open sourced replacement for Icomoon. Its a tool that allows you to convert SVG icons into web fonts. It ensures icons are scalable, accessible, and efficient for web and app development</p></br>
