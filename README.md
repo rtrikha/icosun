@@ -1,5 +1,5 @@
 <p align="left">
-<img width="8%" alt="icoSunLogo" src="https://github.com/user-attachments/assets/02dc825e-98e6-4c67-a676-f379f72e8132">
+<img width="80vw" alt="icoSunLogo" src="https://github.com/user-attachments/assets/02dc825e-98e6-4c67-a676-f379f72e8132">
 </br></br>
 
 <h3>What is Icosun?</h3>
