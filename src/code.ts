@@ -246,7 +246,7 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
       const nodeNames = children.map(item => item.exportName);
       const unicodeMap = generateUnicodeMap(nodeNames);
 
-      figma.notify('✅ Unicode mapping complete', { timeout: 1000 });
+      figma.notify('✅  Unicode mapping complete (1/4)', { timeout: 1000 });
 
       figma.ui.postMessage({
         type: 'update-count',
@@ -254,10 +254,10 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
       });
 
       const glyphsData = await exportSVGsToZip(children, unicodeMap);
-      figma.notify('✅ SVG files generated', { timeout: 1000 });
+      figma.notify('✅  SVG files generated (2/4)', { timeout: 1000 });
 
       const { svg, fonts } = await generateFontFromGlyphs(glyphsData);
-      figma.notify('✅ Font file generated', { timeout: 1000 });
+      figma.notify('✅  Font file generated (3/4)', { timeout: 1000 });
 
       const zipContent = await createIconsZip(svg, unicodeMap, glyphsData, fonts);
 
@@ -266,8 +266,8 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
         content: zipContent
       });
 
-      figma.notify(` 🎊 Successfully generated font files with ${children.length} icons`, {
-        timeout: Infinity,
+      figma.notify(` 🎊  Successfully generated font files with ${children.length} icons (4/4)`, {
+        timeout: 4000
       });
     } catch (error) {
       console.error('Export error:', error);
