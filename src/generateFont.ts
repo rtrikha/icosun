@@ -5,6 +5,19 @@ export interface GlyphMetadata {
 }
 
 export function generateSVGFont(glyphs: GlyphMetadata[]): string {
+    // Validate and log Unicode values
+    console.log('Starting SVG font generation with glyphs:',
+        glyphs.map(g => ({ name: g.name, unicode: g.unicode }))
+    );
+
+    glyphs.forEach(glyph => {
+        if (!glyph.unicode) {
+            console.warn(`Missing unicode for glyph: ${glyph.name}`);
+        }
+        // Log each glyph's Unicode value
+        console.log(`Input Glyph ${glyph.name} Unicode: ${glyph.unicode}`);
+    });
+
     const fontTemplate = `<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -12,12 +25,21 @@ export function generateSVGFont(glyphs: GlyphMetadata[]): string {
 <font id="iconsMaster" horiz-adv-x="1024">
 <font-face units-per-em="1024" ascent="960" descent="-64" />
 <missing-glyph horiz-adv-x="1024" />
-${glyphs.map(glyph => `
-<glyph unicode="&#x${glyph.unicode};" glyph-name="${glyph.name}" 
-    d="${normalizePath(extractPathData(glyph.svg))}" />`).join('')}
+${glyphs.map(glyph => {
+        const unicodeValue = glyph.unicode.toLowerCase();
+        console.log(`SVG Font: Creating glyph "${glyph.name}" with Unicode: &#x${unicodeValue};`);
+        return `
+<glyph unicode="&#x${unicodeValue};" glyph-name="${glyph.name}" 
+    d="${normalizePath(extractPathData(glyph.svg))}" />`;
+    }).join('')}
 </font>
 </defs>
 </svg>`;
+
+    // Log the final SVG to verify Unicode values
+    console.log('Generated SVG font with Unicode values:',
+        fontTemplate.match(/unicode="([^"]+)"/g)
+    );
 
     return fontTemplate;
 }

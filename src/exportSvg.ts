@@ -29,16 +29,19 @@ export async function exportSVGFromNode(nodeInfo: ExportNodeInfo, unicodeMap: Un
         const name = processName(nodeInfo.exportName.replace(/[^a-z0-9_]/gi, '_'));
 
         if (!unicodeMap[name]) {
+            console.warn(`No unicode mapping found for ${name}`);
             return null;
         }
 
         const svgString = Array.from(svg).map(byte => String.fromCharCode(byte)).join('');
 
-        if (!unicodeMap[name].unitRight) {
+        // Ensure we're using the exact same unicode value throughout
+        const unicode = unicodeMap[name].unit;
+
+        if (!unicode) {
+            console.warn(`Invalid unicode for ${name}`);
             return null;
         }
-
-        const unicode = unicodeMap[name].unitRight.replace('&#x', '').replace(';', '');
 
         return {
             name,
@@ -46,6 +49,7 @@ export async function exportSVGFromNode(nodeInfo: ExportNodeInfo, unicodeMap: Un
             svg: svgString
         };
     } catch (error) {
+        console.error('Error in exportSVGFromNode:', error);
         return null;
     }
 }

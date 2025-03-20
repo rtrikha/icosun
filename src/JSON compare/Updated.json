@@ -1,0 +1,3155 @@
+{
+  "Api_Filled": {
+    "unit": "e889"
+  },
+  "Api_Outline": {
+    "unit": "e89a"
+  },
+  "Accessibility_Filled": {
+    "unit": "e933"
+  },
+  "Accessibility_Outline": {
+    "unit": "e944"
+  },
+  "Accountant_Filled": {
+    "unit": "e900"
+  },
+  "Accountant_Outline": {
+    "unit": "e911"
+  },
+  "Accounting_Filled": {
+    "unit": "e901"
+  },
+  "Accounting_Outline": {
+    "unit": "e912"
+  },
+  "Action_Minimize": {
+    "unit": "e8de"
+  },
+  "Add": {
+    "unit": "e812"
+  },
+  "Add_Circle_Filled": {
+    "unit": "e902"
+  },
+  "Add_Circle_Outline": {
+    "unit": "e913"
+  },
+  "Add_Comment_Filled": {
+    "unit": "e914"
+  },
+  "Add_Comment_Outline": {
+    "unit": "e922"
+  },
+  "Add_Notification_Filled": {
+    "unit": "e966"
+  },
+  "Add_Notification_Outline": {
+    "unit": "e977"
+  },
+  "Additional_Info_Outline": {
+    "unit": "e967"
+  },
+  "Airline_Stops_Filled": {
+    "unit": "e934"
+  },
+  "Airline_Stops_Outline": {
+    "unit": "e945"
+  },
+  "Airlines_Filled": {
+    "unit": "e8df"
+  },
+  "Airlines_Outline": {
+    "unit": "e8ef"
+  },
+  "App_Header": {
+    "unit": "e88a"
+  },
+  "App_Management_Filled": {
+    "unit": "e946"
+  },
+  "App_Management_Outline": {
+    "unit": "e955"
+  },
+  "Apple": {
+    "unit": "e834"
+  },
+  "Apple_Safari": {
+    "unit": "e8ab"
+  },
+  "Approval_Filled": {
+    "unit": "e8e0"
+  },
+  "Approval_Outline": {
+    "unit": "e8f0"
+  },
+  "Approve_Reject_Shield_Filled": {
+    "unit": "e9bb"
+  },
+  "Approve_Reject_Shield_Outline": {
+    "unit": "e9cc"
+  },
+  "Apps_Filled": {
+    "unit": "e89b"
+  },
+  "Apps_Outline": {
+    "unit": "e8ac"
+  },
+  "Archive_Filled": {
+    "unit": "e8cd"
+  },
+  "Archive_Outline": {
+    "unit": "e8e1"
+  },
+  "Area_Filled": {
+    "unit": "e89c"
+  },
+  "Area_Outline": {
+    "unit": "e8ad"
+  },
+  "Arrival_Outline": {
+    "unit": "e8e2"
+  },
+  "Arrow_Down": {
+    "unit": "e88b"
+  },
+  "Arrow_Down_Left_Right": {
+    "unit": "e947"
+  },
+  "Arrow_Down_Mini": {
+    "unit": "e8e3"
+  },
+  "Arrow_Down_Right": {
+    "unit": "e8f1"
+  },
+  "Arrow_Left": {
+    "unit": "e88c"
+  },
+  "Arrow_Right": {
+    "unit": "e89d"
+  },
+  "Arrow_Right_Plus_Filled": {
+    "unit": "e968"
+  },
+  "Arrow_Right_Plus_Outline": {
+    "unit": "e978"
+  },
+  "Arrow_Up": {
+    "unit": "e867"
+  },
+  "Arrow_Up_Mini": {
+    "unit": "e8bc"
+  },
+  "Arrow_Up_Right": {
+    "unit": "e8ce"
+  },
+  "Arrow_Up_Right_Box": {
+    "unit": "e915"
+  },
+  "Audit_Observation_Filled": {
+    "unit": "e979"
+  },
+  "Audit_Observation_Outline": {
+    "unit": "e988"
+  },
+  "Authenticator_Filled": {
+    "unit": "e935"
+  },
+  "Authenticator_Outline": {
+    "unit": "e948"
+  },
+  "Auto_Filled": {
+    "unit": "e89e"
+  },
+  "Auto_Outline": {
+    "unit": "e8ae"
+  },
+  "Automated_Compliance_Filled": {
+    "unit": "e9aa"
+  },
+  "Automated_Compliance_Outline": {
+    "unit": "e9bc"
+  },
+  "Bags_Filled": {
+    "unit": "e8b9"
+  },
+  "Bags_Outline": {
+    "unit": "e8ca"
+  },
+  "Bandaged_Foot_Filled": {
+    "unit": "e952"
+  },
+  "Bandaged_Foot_Outline": {
+    "unit": "e963"
+  },
+  "Bank_Filled": {
+    "unit": "e8ba"
+  },
+  "Bank_Outline": {
+    "unit": "e8cb"
+  },
+  "Bar_Chart_Filled": {
+    "unit": "e90e"
+  },
+  "Bar_Chart_Outline": {
+    "unit": "e91f"
+  },
+  "Bento_Box": {
+    "unit": "e897"
+  },
+  "Bitwarden": {
+    "unit": "e898"
+  },
+  "Blogs_Filled": {
+    "unit": "e8cc"
+  },
+  "Blogs_Outline": {
+    "unit": "e8db"
+  },
+  "Bookmark_Filled": {
+    "unit": "e8fd"
+  },
+  "Bookmark_Outline": {
+    "unit": "e90f"
+  },
+  "Books_Filled": {
+    "unit": "e8cf"
+  },
+  "Books_Outline": {
+    "unit": "e8dc"
+  },
+  "Brazilian_Real": {
+    "unit": "e8ec"
+  },
+  "Brex": {
+    "unit": "e842"
+  },
+  "Briefcase_Filled": {
+    "unit": "e910"
+  },
+  "Briefcase_Outline": {
+    "unit": "e920"
+  },
+  "Budget_Dollar_Filled": {
+    "unit": "e953"
+  },
+  "Budget_Dollar_Outline": {
+    "unit": "e964"
+  },
+  "Budget_Euro_Filled": {
+    "unit": "e930"
+  },
+  "Budget_Euro_Outline": {
+    "unit": "e941"
+  },
+  "Budget_Pound_Filled": {
+    "unit": "e942"
+  },
+  "Budget_Pound_Outline": {
+    "unit": "e954"
+  },
+  "Budget_Rupee_Filled": {
+    "unit": "e943"
+  },
+  "Budget_Rupee_Outline": {
+    "unit": "e956"
+  },
+  "Budget_Yen_Filled": {
+    "unit": "e921"
+  },
+  "Budget_Yen_Outline": {
+    "unit": "e931"
+  },
+  "Button": {
+    "unit": "e864"
+  },
+  "Cabin_Class": {
+    "unit": "e8d8"
+  },
+  "Cabin_Class_Upgrade": {
+    "unit": "e960"
+  },
+  "Calendar_Filled": {
+    "unit": "e91c"
+  },
+  "Calendar_Mini": {
+    "unit": "e8fa"
+  },
+  "Calendar_Outline": {
+    "unit": "e92d"
+  },
+  "Camera_Filled": {
+    "unit": "e8fb"
+  },
+  "Camera_Outline": {
+    "unit": "e90b"
+  },
+  "Cancel_Filled": {
+    "unit": "e8fc"
+  },
+  "Cancel_Outline": {
+    "unit": "e90c"
+  },
+  "Carat_Down": {
+    "unit": "e8c7"
+  },
+  "Carat_Left": {
+    "unit": "e8c8"
+  },
+  "Carat_Right": {
+    "unit": "e8d9"
+  },
+  "Carat_Up": {
+    "unit": "e8a5"
+  },
+  "Carriage_Filled": {
+    "unit": "e91d"
+  },
+  "Carriage_Outline": {
+    "unit": "e92e"
+  },
+  "Carry_On_Bag_Filled": {
+    "unit": "e961"
+  },
+  "Carry_On_Bag_Outline": {
+    "unit": "e971"
+  },
+  "Carta": {
+    "unit": "e872"
+  },
+  "Certificate_Filled": {
+    "unit": "e94f"
+  },
+  "Certificate_Outline": {
+    "unit": "e962"
+  },
+  "Change_Commuter_Benefits_Filled": {
+    "unit": "ea2c"
+  },
+  "Change_Commuter_Benefits_Outline": {
+    "unit": "ea3d"
+  },
+  "Change_Filled": {
+    "unit": "e8fe"
+  },
+  "Change_Fsa_Dollar_Filled": {
+    "unit": "e9b5"
+  },
+  "Change_Fsa_Dollar_Outline": {
+    "unit": "e9c6"
+  },
+  "Change_Fsa_Euro_Filled": {
+    "unit": "e993"
+  },
+  "Change_Fsa_Euro_Outline": {
+    "unit": "e9a4"
+  },
+  "Change_Fsa_Pound_Filled": {
+    "unit": "e9a5"
+  },
+  "Change_Fsa_Pound_Outline": {
+    "unit": "e9b6"
+  },
+  "Change_Fsa_Rupee_Filled": {
+    "unit": "e9a6"
+  },
+  "Change_Fsa_Rupee_Outline": {
+    "unit": "e9b7"
+  },
+  "Change_Fsa_Yen_Filled": {
+    "unit": "e982"
+  },
+  "Change_Fsa_Yen_Outline": {
+    "unit": "e994"
+  },
+  "Change_Insurance_Filled": {
+    "unit": "e9a7"
+  },
+  "Change_Insurance_Outline": {
+    "unit": "e9b8"
+  },
+  "Change_Outline": {
+    "unit": "e90d"
+  },
+  "Change_Tax_Withholding_Filled": {
+    "unit": "ea0a"
+  },
+  "Change_Tax_Withholding_Outline": {
+    "unit": "ea1b"
+  },
+  "Charity_Filled": {
+    "unit": "e916"
+  },
+  "Charity_Outline": {
+    "unit": "e91e"
+  },
+  "Check": {
+    "unit": "e873"
+  },
+  "Check_Circle_Filled": {
+    "unit": "e965"
+  },
+  "Check_Circle_Outline": {
+    "unit": "e972"
+  },
+  "Checkbox_Fill": {
+    "unit": "e8ff"
+  },
+  "Checkbox_Intermediate": {
+    "unit": "e983"
+  },
+  "Checkbox_Outline": {
+    "unit": "e92f"
+  },
+  "Checkbox_Withcheck_Outline": {
+    "unit": "e9d7"
+  },
+  "Checked_Bag_Filled": {
+    "unit": "e950"
+  },
+  "Checked_Bag_Outline": {
+    "unit": "e969"
+  },
+  "Checklist": {
+    "unit": "e8b6"
+  },
+  "Chevron_Circle_Down_Filled": {
+    "unit": "e9d8"
+  },
+  "Chevron_Circle_Down_Outline": {
+    "unit": "e9e8"
+  },
+  "Chevron_Circle_Up_Filled": {
+    "unit": "e9b9"
+  },
+  "Chevron_Circle_Up_Outline": {
+    "unit": "e9c7"
+  },
+  "Chevron_Down": {
+    "unit": "e8e9"
+  },
+  "Chevron_Left": {
+    "unit": "e8ea"
+  },
+  "Chevron_Right": {
+    "unit": "e903"
+  },
+  "Chevron_Up": {
+    "unit": "e8c9"
+  },
+  "Chrome": {
+    "unit": "e883"
+  },
+  "Clear": {
+    "unit": "e874"
+  },
+  "Clear_Formatting_Filled": {
+    "unit": "e9a8"
+  },
+  "Clear_Formatting_Outline": {
+    "unit": "e9ba"
+  },
+  "Client_Command_Filled": {
+    "unit": "e984"
+  },
+  "Client_Command_Outline": {
+    "unit": "e995"
+  },
+  "Close": {
+    "unit": "e875"
+  },
+  "Close_Circle_Filled": {
+    "unit": "e96a"
+  },
+  "Close_Circle_Outline": {
+    "unit": "e973"
+  },
+  "Closed_Captions_Filled": {
+    "unit": "e996"
+  },
+  "Closed_Captions_Outline": {
+    "unit": "e9a9"
+  },
+  "Co2": {
+    "unit": "e850"
+  },
+  "Codecov": {
+    "unit": "e894"
+  },
+  "Cog_Globe_Filled": {
+    "unit": "e932"
+  },
+  "Cog_Globe_Outline": {
+    "unit": "e93e"
+  },
+  "Collapse": {
+    "unit": "e8a6"
+  },
+  "Collapse_Panel_Filled": {
+    "unit": "e985"
+  },
+  "Collapse_Panel_Outline": {
+    "unit": "e997"
+  },
+  "Column_Bar_Chart_Filled": {
+    "unit": "e9ab"
+  },
+  "Column_Bar_Chart_Outline": {
+    "unit": "e9bd"
+  },
+  "Combo_Chart_Filled": {
+    "unit": "e951"
+  },
+  "Combo_Chart_Outline": {
+    "unit": "e96b"
+  },
+  "Comfort_Filled": {
+    "unit": "e917"
+  },
+  "Comments_Filled": {
+    "unit": "e923"
+  },
+  "Comments_Outline": {
+    "unit": "e936"
+  },
+  "Company_Settings_Filled": {
+    "unit": "e9ac"
+  },
+  "Company_Settings_Outline": {
+    "unit": "e9be"
+  },
+  "Compass_Filled": {
+    "unit": "e918"
+  },
+  "Compass_Outline": {
+    "unit": "e924"
+  },
+  "Competitive_Parental_Leave_Filled": {
+    "unit": "ea4e"
+  },
+  "Competitive_Parental_Leave_Outline": {
+    "unit": "ea5f"
+  },
+  "Compliance_360": {
+    "unit": "e919"
+  },
+  "Compliance_Training_Filled": {
+    "unit": "e9d9"
+  },
+  "Compliance_Training_Outline": {
+    "unit": "e9e9"
+  },
+  "Compose_Filled": {
+    "unit": "e91a"
+  },
+  "Compose_Outline": {
+    "unit": "e925"
+  },
+  "Connect_Cloud_Filled": {
+    "unit": "e974"
+  },
+  "Connect_Cloud_Outline": {
+    "unit": "e986"
+  },
+  "Connect_Database_Filled": {
+    "unit": "e9ad"
+  },
+  "Connect_Database_Outline": {
+    "unit": "e9bf"
+  },
+  "Consultant_Filled": {
+    "unit": "e93f"
+  },
+  "Consultant_Outline": {
+    "unit": "e957"
+  },
+  "Content_Library_Filled": {
+    "unit": "e998"
+  },
+  "Content_Library_Outline": {
+    "unit": "e9ae"
+  },
+  "Control_Filled": {
+    "unit": "e91b"
+  },
+  "Control_Outline": {
+    "unit": "e926"
+  },
+  "Copy_Filled": {
+    "unit": "e8da"
+  },
+  "Copy_Outline": {
+    "unit": "e8eb"
+  },
+  "Costa_Rican_Coln": {
+    "unit": "e937"
+  },
+  "Courses_Filled": {
+    "unit": "e927"
+  },
+  "Courses_Outline": {
+    "unit": "e928"
+  },
+  "Create_Course_Filled": {
+    "unit": "e975"
+  },
+  "Create_Course_Outline": {
+    "unit": "e987"
+  },
+  "Credit_Card_Filled": {
+    "unit": "e958"
+  },
+  "Credit_Card_Outline": {
+    "unit": "e96c"
+  },
+  "Credit_Card_Spending_Limit_Filled": {
+    "unit": "ea4f"
+  },
+  "Credit_Card_Spending_Limit_Outline": {
+    "unit": "ea60"
+  },
+  "Csv_Filled": {
+    "unit": "e8d0"
+  },
+  "Csv_Outline": {
+    "unit": "e8dd"
+  },
+  "Cup": {
+    "unit": "e851"
+  },
+  "Currency_Coversion_Dollar": {
+    "unit": "e9c8"
+  },
+  "Currency_Coversion_Euro": {
+    "unit": "e9af"
+  },
+  "Currency_Coversion_Pound": {
+    "unit": "e9c0"
+  },
+  "Currency_Coversion_Rupee": {
+    "unit": "e9c1"
+  },
+  "Currency_Coversion_Yen": {
+    "unit": "e999"
+  },
+  "Current_Step_Filled": {
+    "unit": "e96d"
+  },
+  "Current_Step_Outline": {
+    "unit": "e976"
+  },
+  "Current_Step_Small_Filled": {
+    "unit": "e9c9"
+  },
+  "Current_Step_Small_Outline": {
+    "unit": "e9da"
+  },
+  "Custom_Apps_Filled": {
+    "unit": "e959"
+  },
+  "Custom_Apps_Outline": {
+    "unit": "e96e"
+  },
+  "Custom_Fields_Filled": {
+    "unit": "e97a"
+  },
+  "Custom_Fields_Outline": {
+    "unit": "e989"
+  },
+  "Customer_Maturity_Filled": {
+    "unit": "e9c2"
+  },
+  "Customer_Maturity_Outline": {
+    "unit": "e9ca"
+  },
+  "Customer_Spotlight_Filled": {
+    "unit": "e9cb"
+  },
+  "Customer_Spotlight_Outline": {
+    "unit": "e9db"
+  },
+  "Customer_Testimonials_Filled": {
+    "unit": "e9f9"
+  },
+  "Customer_Testimonials_Outline": {
+    "unit": "ea0b"
+  },
+  "Customize_Policy_Filled": {
+    "unit": "e9b0"
+  },
+  "Customize_Policy_Outline": {
+    "unit": "e9c3"
+  },
+  "Cut": {
+    "unit": "e852"
+  },
+  "Czech_Koruna": {
+    "unit": "e8ed"
+  },
+  "Dashboard": {
+    "unit": "e8d5"
+  },
+  "Dashlane": {
+    "unit": "e8c4"
+  },
+  "Data_Connector_Filled": {
+    "unit": "e9a1"
+  },
+  "Data_Connector_Outline": {
+    "unit": "e9b2"
+  },
+  "Decimal_Decrease": {
+    "unit": "e94c"
+  },
+  "Decimal_Increase": {
+    "unit": "e94d"
+  },
+  "Delivery_Truck_Filled": {
+    "unit": "e9a2"
+  },
+  "Delivery_Truck_Outline": {
+    "unit": "e9b3"
+  },
+  "Depart_Date": {
+    "unit": "e8f7"
+  },
+  "Departments_Filled": {
+    "unit": "e96f"
+  },
+  "Departments_Outline": {
+    "unit": "e97f"
+  },
+  "Departure_Filled": {
+    "unit": "e94e"
+  },
+  "Departure_Outline": {
+    "unit": "e95d"
+  },
+  "Deploy_Filled": {
+    "unit": "e929"
+  },
+  "Deploy_Outline": {
+    "unit": "e92a"
+  },
+  "Desktop_Filled": {
+    "unit": "e92b"
+  },
+  "Desktop_Outline": {
+    "unit": "e93b"
+  },
+  "Device_Inventory_Filled": {
+    "unit": "e9c4"
+  },
+  "Device_Inventory_Management_Filled": {
+    "unit": "ea7e"
+  },
+  "Device_Inventory_Management_Outline": {
+    "unit": "ea8f"
+  },
+  "Device_Inventory_Outline": {
+    "unit": "e9d4"
+  },
+  "Direct_Report_Filled": {
+    "unit": "e990"
+  },
+  "Direct_Reports_Outline": {
+    "unit": "e9b4"
+  },
+  "Document_Filled": {
+    "unit": "e93c"
+  },
+  "Document_Outline": {
+    "unit": "e95a"
+  },
+  "Dog_Friendly_Filled": {
+    "unit": "e980"
+  },
+  "Dog_Friendly_Outline": {
+    "unit": "e991"
+  },
+  "Dollar": {
+    "unit": "e8a2"
+  },
+  "Dollar_Circle_Arrows_Filled": {
+    "unit": "ea07"
+  },
+  "Dollar_Circle_Arrows_Outline": {
+    "unit": "ea18"
+  },
+  "Dollar_Circle_Cog_Filled": {
+    "unit": "e9d5"
+  },
+  "Dollar_Circle_Cog_Outline": {
+    "unit": "e9e5"
+  },
+  "Dollar_Circle_Filled": {
+    "unit": "e992"
+  },
+  "Dollar_Circle_Outline": {
+    "unit": "e9a3"
+  },
+  "Dollar_Mini": {
+    "unit": "e8f8"
+  },
+  "Double_Chevron": {
+    "unit": "e92c"
+  },
+  "Doughnut_Chart_Filled": {
+    "unit": "e9b1"
+  },
+  "Doughnut_Chart_Outline": {
+    "unit": "e9c5"
+  },
+  "Download": {
+    "unit": "e8c5"
+  },
+  "Drag": {
+    "unit": "e880"
+  },
+  "Dropdown_Arrow_Down_Filled": {
+    "unit": "e9f6"
+  },
+  "Dropdown_Arrow_Left_Filled": {
+    "unit": "e9f7"
+  },
+  "Dropdown_Arrow_Right_Filled": {
+    "unit": "ea08"
+  },
+  "Dropdown_Arrow_Up_Filled": {
+    "unit": "e9d6"
+  },
+  "Dropdown_Filled": {
+    "unit": "e93d"
+  },
+  "Dropdown_Folder_Filled": {
+    "unit": "e9cd"
+  },
+  "Dropdown_Folder_Outline": {
+    "unit": "e9ce"
+  },
+  "Duo": {
+    "unit": "e86f"
+  },
+  "Duplicate_Filled": {
+    "unit": "e95b"
+  },
+  "Duplicate_Outline": {
+    "unit": "e95e"
+  },
+  "E_Align_Center": {
+    "unit": "e949"
+  },
+  "E_Align_Justify": {
+    "unit": "e95c"
+  },
+  "E_Align_Left": {
+    "unit": "e938"
+  },
+  "E_Align_Right": {
+    "unit": "e939"
+  },
+  "E_Attach": {
+    "unit": "e8e4"
+  },
+  "E_Bold": {
+    "unit": "e8c1"
+  },
+  "E_Code_Embed": {
+    "unit": "e93a"
+  },
+  "E_Font_Color": {
+    "unit": "e940"
+  },
+  "E_Font_Color1": {
+    "unit": "e94a"
+  },
+  "E_Font_Size": {
+    "unit": "e94b"
+  },
+  "E_Indent_Decrease": {
+    "unit": "e97c"
+  },
+  "E_Indent_Increase": {
+    "unit": "e97d"
+  },
+  "E_Italic": {
+    "unit": "e8e5"
+  },
+  "E_Link": {
+    "unit": "e8c2"
+  },
+  "E_Stretch": {
+    "unit": "e8f4"
+  },
+  "E_Strikethrough": {
+    "unit": "e95f"
+  },
+  "E_Underline": {
+    "unit": "e970"
+  },
+  "Edit_Filled": {
+    "unit": "e97b"
+  },
+  "Edit_Outline": {
+    "unit": "e97e"
+  },
+  "Email_Filled": {
+    "unit": "e981"
+  },
+  "Email_Outline": {
+    "unit": "e98a"
+  },
+  "Employee_Info_Filled": {
+    "unit": "e9cf"
+  },
+  "Employment_Info_Outline": {
+    "unit": "e9e2"
+  },
+  "Engineering_Filled": {
+    "unit": "e98d"
+  },
+  "Engineering_Outline": {
+    "unit": "e99e"
+  },
+  "Enter_Full_Screen": {
+    "unit": "e98b"
+  },
+  "Entertainment_Filled": {
+    "unit": "e9d0"
+  },
+  "Entertainment_Outline": {
+    "unit": "e9d1"
+  },
+  "Equal_To": {
+    "unit": "e8e6"
+  },
+  "Equity_Dollar_Filled": {
+    "unit": "e9d2"
+  },
+  "Equity_Dollar_Outline": {
+    "unit": "e9d3"
+  },
+  "Equity_Euro_Filled": {
+    "unit": "e98e"
+  },
+  "Equity_Euro_Outline": {
+    "unit": "e99f"
+  },
+  "Equity_Pound_Filled": {
+    "unit": "e9a0"
+  },
+  "Equity_Pound_Outline": {
+    "unit": "e9dc"
+  },
+  "Equity_Rupee_Filled": {
+    "unit": "e9dd"
+  },
+  "Equity_Rupee_Outline": {
+    "unit": "e9de"
+  },
+  "Equity_Yen_Filled": {
+    "unit": "e98c"
+  },
+  "Equity_Yen_Outline": {
+    "unit": "e98f"
+  },
+  "Euro": {
+    "unit": "e89f"
+  },
+  "Euro_Circle_Filled": {
+    "unit": "e99a"
+  },
+  "Euro_Circle_Outline": {
+    "unit": "e9df"
+  },
+  "Events_And_Webinars_Filled": {
+    "unit": "ea15"
+  },
+  "Events_And_Webinars_Outline": {
+    "unit": "ea26"
+  },
+  "Excel": {
+    "unit": "e8b0"
+  },
+  "Exit_Full_Screen": {
+    "unit": "e99b"
+  },
+  "Expand": {
+    "unit": "e8c3"
+  },
+  "Expand_Panel_Filled": {
+    "unit": "e9e0"
+  },
+  "Expand_Panel_Outline": {
+    "unit": "e9e1"
+  },
+  "Expense_Policy_Dollar_Filled": {
+    "unit": "ea37"
+  },
+  "Expense_Policy_Dollar_Outline": {
+    "unit": "ea48"
+  },
+  "Expense_Policy_Euro_Filled": {
+    "unit": "ea16"
+  },
+  "Expense_Policy_Euro_Outline": {
+    "unit": "ea27"
+  },
+  "Expense_Policy_Pound_Filled": {
+    "unit": "ea28"
+  },
+  "Expense_Policy_Pound_Outline": {
+    "unit": "ea38"
+  },
+  "Expense_Policy_Rupee_Filled": {
+    "unit": "ea29"
+  },
+  "Expense_Policy_Rupee_Outline": {
+    "unit": "ea39"
+  },
+  "Expense_Policy_Yen_Filled": {
+    "unit": "ea04"
+  },
+  "Expense_Policy_Yen_Outline": {
+    "unit": "ea17"
+  },
+  "Expensify": {
+    "unit": "e8f5"
+  },
+  "Eye_Filled": {
+    "unit": "e905"
+  },
+  "Eye_Outline": {
+    "unit": "e99c"
+  },
+  "Fsa_Filled": {
+    "unit": "e99d"
+  },
+  "Fsa_Outline": {
+    "unit": "e9e3"
+  },
+  "Facebook": {
+    "unit": "e904"
+  },
+  "Feather_Filled": {
+    "unit": "e9e4"
+  },
+  "Feather_Outline": {
+    "unit": "e9e6"
+  },
+  "Feedback_Form_Filled": {
+    "unit": "e9e7"
+  },
+  "Feedback_Form_Outline": {
+    "unit": "e9ea"
+  },
+  "Fido_Filled": {
+    "unit": "e9eb"
+  },
+  "Fido_Outline": {
+    "unit": "e9ec"
+  },
+  "File_Filled": {
+    "unit": "e9ed"
+  },
+  "File_Outline": {
+    "unit": "e9ee"
+  },
+  "File_Shield_Plus_Filled": {
+    "unit": "ea01"
+  },
+  "File_Shield_Plus_Outline": {
+    "unit": "ea12"
+  },
+  "Filter": {
+    "unit": "e8e7"
+  },
+  "Filter_By_Type_Filled": {
+    "unit": "e9ef"
+  },
+  "Filter_By_Type_Outline": {
+    "unit": "e9f0"
+  },
+  "Filter_Mini": {
+    "unit": "e9f1"
+  },
+  "Finances_Filled": {
+    "unit": "e9f2"
+  },
+  "Finances_Outline": {
+    "unit": "e9f3"
+  },
+  "Fingerprint": {
+    "unit": "e9f4"
+  },
+  "Fitness_Filled": {
+    "unit": "e9f5"
+  },
+  "Fitness_Outline": {
+    "unit": "e9f8"
+  },
+  "Flag_Filled": {
+    "unit": "e9fa"
+  },
+  "Flag_Outline": {
+    "unit": "e9fb"
+  },
+  "Flexible_Work_Schedule_Filled": {
+    "unit": "ea67"
+  },
+  "Flexible_Work_Schedule_Outline": {
+    "unit": "ea78"
+  },
+  "Flights_Filled": {
+    "unit": "e9fc"
+  },
+  "Flights_Outline": {
+    "unit": "e9fd"
+  },
+  "Folder_Filled": {
+    "unit": "e9fe"
+  },
+  "Folder_Open": {
+    "unit": "e9ff"
+  },
+  "Folder_Outline": {
+    "unit": "ea00"
+  },
+  "Font_Color": {
+    "unit": "ea02"
+  },
+  "Font_Color_Filled": {
+    "unit": "ea03"
+  },
+  "Font_Highlight_Filled": {
+    "unit": "ea05"
+  },
+  "Font_Highlight_Outline": {
+    "unit": "ea06"
+  },
+  "Forward_10_Seconds": {
+    "unit": "ea09"
+  },
+  "Function": {
+    "unit": "e906"
+  },
+  "Funnel_Chart_Filled": {
+    "unit": "ea0c"
+  },
+  "Funnel_Chart_Outline": {
+    "unit": "ea0d"
+  },
+  "Future_Step_Filled": {
+    "unit": "ea0e"
+  },
+  "Future_Step_Outline": {
+    "unit": "ea0f"
+  },
+  "Future_Step_Small_Filled": {
+    "unit": "ea13"
+  },
+  "Future_Step_Small_Outline": {
+    "unit": "ea23"
+  },
+  "Fx_Filled": {
+    "unit": "ea10"
+  },
+  "Fx_Outline": {
+    "unit": "ea11"
+  },
+  "Gpt_Filled": {
+    "unit": "ea14"
+  },
+  "Gpt_Outline": {
+    "unit": "ea19"
+  },
+  "Gauge_Chart_Filled": {
+    "unit": "ea1a"
+  },
+  "Gauge_Chart_Outline": {
+    "unit": "ea1c"
+  },
+  "General_Ledger_Dollar_Filled": {
+    "unit": "ea75"
+  },
+  "General_Ledger_Dollar_Outline": {
+    "unit": "ea86"
+  },
+  "General_Ledger_Euro_Filled": {
+    "unit": "ea53"
+  },
+  "General_Ledger_Euro_Outline": {
+    "unit": "ea64"
+  },
+  "General_Ledger_Pound_Filled": {
+    "unit": "ea65"
+  },
+  "General_Ledger_Pound_Outline": {
+    "unit": "ea76"
+  },
+  "General_Ledger_Rupee_Filled": {
+    "unit": "ea66"
+  },
+  "General_Ledger_Rupee_Outline": {
+    "unit": "ea77"
+  },
+  "General_Ledger_Yen_Filled": {
+    "unit": "ea42"
+  },
+  "General_Ledger_Yen_Outline": {
+    "unit": "ea54"
+  },
+  "Gif_Filled": {
+    "unit": "ea1d"
+  },
+  "Gif_Outline": {
+    "unit": "ea1e"
+  },
+  "Gift_Filled": {
+    "unit": "ea1f"
+  },
+  "Gift_Outline": {
+    "unit": "ea20"
+  },
+  "Github": {
+    "unit": "e907"
+  },
+  "Globe_Filled": {
+    "unit": "ea21"
+  },
+  "Globe_Outline": {
+    "unit": "ea22"
+  },
+  "Goals_Filled": {
+    "unit": "ea24"
+  },
+  "Goals_Outline": {
+    "unit": "ea25"
+  },
+  "Google": {
+    "unit": "e908"
+  },
+  "Graph_Chart": {
+    "unit": "ea2a"
+  },
+  "Greater_Or_Equal_To": {
+    "unit": "ea2b"
+  },
+  "Greater_Than": {
+    "unit": "ea2d"
+  },
+  "Greenhouse": {
+    "unit": "ea2e"
+  },
+  "Groceries_Filled": {
+    "unit": "ea2f"
+  },
+  "Groceries_Outline": {
+    "unit": "ea30"
+  },
+  "Group_By_Filled": {
+    "unit": "ea31"
+  },
+  "Group_By_Outline": {
+    "unit": "ea32"
+  },
+  "Gsuite": {
+    "unit": "e909"
+  },
+  "Guidepost_Filled": {
+    "unit": "ea33"
+  },
+  "Guidepost_Outline": {
+    "unit": "ea34"
+  },
+  "Hr_Filled": {
+    "unit": "ea35"
+  },
+  "Hr_Outline": {
+    "unit": "ea36"
+  },
+  "Hsa_Filled": {
+    "unit": "ea3a"
+  },
+  "Hsa_Outline": {
+    "unit": "ea3b"
+  },
+  "Hamburger": {
+    "unit": "ea3c"
+  },
+  "Hand_Dollar_Filled": {
+    "unit": "ea3e"
+  },
+  "Hand_Dollar_Outline": {
+    "unit": "ea3f"
+  },
+  "Hand_Plus_Filled": {
+    "unit": "ea40"
+  },
+  "Hand_Plus_Outline": {
+    "unit": "ea41"
+  },
+  "Handshake_Filled": {
+    "unit": "ea43"
+  },
+  "Handshake_Outline": {
+    "unit": "ea44"
+  },
+  "Headphones_Filled": {
+    "unit": "ea45"
+  },
+  "Headphones_Outline": {
+    "unit": "ea46"
+  },
+  "Heal_Filled": {
+    "unit": "ea47"
+  },
+  "Healing_Outline": {
+    "unit": "ea49"
+  },
+  "Health_Filled": {
+    "unit": "ea4a"
+  },
+  "Health_Outline": {
+    "unit": "ea4b"
+  },
+  "Heart_Filled": {
+    "unit": "ea4c"
+  },
+  "Heart_Outline": {
+    "unit": "ea4d"
+  },
+  "Help_Center_Filled": {
+    "unit": "ea50"
+  },
+  "Help_Center_Outline": {
+    "unit": "ea51"
+  },
+  "Help_Filled": {
+    "unit": "ea52"
+  },
+  "Help_Outline": {
+    "unit": "ea55"
+  },
+  "Hide_Filled": {
+    "unit": "ea56"
+  },
+  "Hide_Outline": {
+    "unit": "ea57"
+  },
+  "High_Priority": {
+    "unit": "ea58"
+  },
+  "History": {
+    "unit": "ea59"
+  },
+  "Home_Exit": {
+    "unit": "ea5a"
+  },
+  "Home_Filled": {
+    "unit": "ea5b"
+  },
+  "Home_Outline": {
+    "unit": "ea5c"
+  },
+  "Hotel_Class_Filled": {
+    "unit": "ea5d"
+  },
+  "Hotel_Filled": {
+    "unit": "ea5e"
+  },
+  "Hotel_Outline": {
+    "unit": "ea61"
+  },
+  "I9_Filled": {
+    "unit": "ea62"
+  },
+  "I_9_Outline": {
+    "unit": "ea63"
+  },
+  "Image_Adjust_Break_Text": {
+    "unit": "ea68"
+  },
+  "Image_Adjust_In_Line": {
+    "unit": "ea69"
+  },
+  "Image_Adjust_Wrap_Text": {
+    "unit": "ea6a"
+  },
+  "Image_Filled": {
+    "unit": "ea6b"
+  },
+  "Image_Outline": {
+    "unit": "ea6c"
+  },
+  "In_Plan_Filled": {
+    "unit": "ea6d"
+  },
+  "In_Plan_Outline": {
+    "unit": "ea6e"
+  },
+  "In_Progress_Step_Filled": {
+    "unit": "ea6f"
+  },
+  "In_Progress_Step_Outline": {
+    "unit": "ea70"
+  },
+  "In_Progress_Step_Small_Filled": {
+    "unit": "eac4"
+  },
+  "In_Progress_Step_Small_Outline": {
+    "unit": "ead5"
+  },
+  "Info_Additional": {
+    "unit": "ea71"
+  },
+  "Info_Circle_Fill": {
+    "unit": "ea72"
+  },
+  "Info_Circle_Outline": {
+    "unit": "ea73"
+  },
+  "Inpolicy_Filled": {
+    "unit": "ea74"
+  },
+  "Inpolicy_Outline": {
+    "unit": "ea79"
+  },
+  "Instagram": {
+    "unit": "ea7a"
+  },
+  "Insurance_Filled": {
+    "unit": "ea7b"
+  },
+  "Insurance_Outline": {
+    "unit": "ea7c"
+  },
+  "Integrated_Apps_Filled": {
+    "unit": "ea7d"
+  },
+  "Integrated_Apps_Outline": {
+    "unit": "ea7f"
+  },
+  "Interactive_Course_Filled": {
+    "unit": "ea80"
+  },
+  "Interactive_Course_Outline": {
+    "unit": "ea91"
+  },
+  "Invoice_Dollar_Filled": {
+    "unit": "ea81"
+  },
+  "Invoice_Dollar_Outline": {
+    "unit": "ea82"
+  },
+  "Invoice_Euro_Filled": {
+    "unit": "ea83"
+  },
+  "Invoice_Euro_Outline": {
+    "unit": "ea84"
+  },
+  "Invoice_Pound_Filled": {
+    "unit": "ea85"
+  },
+  "Invoice_Pound_Outline": {
+    "unit": "ea87"
+  },
+  "Invoice_Rupee_Filled": {
+    "unit": "ea88"
+  },
+  "Invoice_Rupee_Outline": {
+    "unit": "ea89"
+  },
+  "Invoice_Yen_Filled": {
+    "unit": "ea8a"
+  },
+  "Invoice_Yen_Outline": {
+    "unit": "ea8b"
+  },
+  "Ios": {
+    "unit": "e90a"
+  },
+  "Iphone_Outline": {
+    "unit": "ea8c"
+  },
+  "It_Filled": {
+    "unit": "ea8d"
+  },
+  "It_Outline": {
+    "unit": "ea8e"
+  },
+  "Jira": {
+    "unit": "ea90"
+  },
+  "Kanban": {
+    "unit": "ea92"
+  },
+  "Key": {
+    "unit": "ea93"
+  },
+  "Keyhole_Filled": {
+    "unit": "ea94"
+  },
+  "Keyhole_Outline": {
+    "unit": "ea95"
+  },
+  "Lms_Filled": {
+    "unit": "ea96"
+  },
+  "Lms_Outline": {
+    "unit": "ea97"
+  },
+  "Labs": {
+    "unit": "ea98"
+  },
+  "Laptop_Filled": {
+    "unit": "ea99"
+  },
+  "Laptop_Outline": {
+    "unit": "ea9a"
+  },
+  "Lastpass": {
+    "unit": "ea9b"
+  },
+  "Lattice": {
+    "unit": "ea9c"
+  },
+  "Leave_Management_Filled": {
+    "unit": "eabb"
+  },
+  "Leave_Management_Outlined": {
+    "unit": "eadd"
+  },
+  "Legal_Filled": {
+    "unit": "ea9d"
+  },
+  "Legal_Outline": {
+    "unit": "ea9e"
+  },
+  "Legroom_Filled": {
+    "unit": "ea9f"
+  },
+  "Legroom_Outline": {
+    "unit": "eaa0"
+  },
+  "Less_Or_Equal_To": {
+    "unit": "eaa1"
+  },
+  "Less_Than": {
+    "unit": "eaa2"
+  },
+  "Life_Filled": {
+    "unit": "eaa3"
+  },
+  "Life_Outline": {
+    "unit": "eaa4"
+  },
+  "Line_Chart": {
+    "unit": "eaa5"
+  },
+  "Line_Height": {
+    "unit": "eaa6"
+  },
+  "Line_Spacing": {
+    "unit": "eaa7"
+  },
+  "Link_Horizontal": {
+    "unit": "eaa8"
+  },
+  "Link_Outlet": {
+    "unit": "eaa9"
+  },
+  "Linkedin": {
+    "unit": "eaaa"
+  },
+  "List_Filled": {
+    "unit": "eaab"
+  },
+  "List_Mini": {
+    "unit": "eaac"
+  },
+  "List_Outline": {
+    "unit": "eaad"
+  },
+  "Lithuanian_Litas": {
+    "unit": "eaae"
+  },
+  "Location_Filled": {
+    "unit": "eaaf"
+  },
+  "Location_Outline": {
+    "unit": "eab0"
+  },
+  "Lock_Filled": {
+    "unit": "eab1"
+  },
+  "Lock_Outline": {
+    "unit": "eab3"
+  },
+  "Long_Answer": {
+    "unit": "eab4"
+  },
+  "Macos": {
+    "unit": "eab5"
+  },
+  "Mark_As_Stolen_Filled": {
+    "unit": "eab8"
+  },
+  "Mark_As_Stolen_Outline": {
+    "unit": "eac9"
+  },
+  "Marketing_And_Advertising_Filled": {
+    "unit": "eb73"
+  },
+  "Marketing_And_Advertising_Outline": {
+    "unit": "eb84"
+  },
+  "Meals_Filled": {
+    "unit": "eab6"
+  },
+  "Meals_Outline": {
+    "unit": "eab7"
+  },
+  "Meals_Snacks_Drinks_Filled": {
+    "unit": "eb0d"
+  },
+  "Meals_Snacks_Drinks_Outline": {
+    "unit": "eb1e"
+  },
+  "Medical_Filled": {
+    "unit": "eab9"
+  },
+  "Medical_Outline": {
+    "unit": "eaba"
+  },
+  "Meeting_Rooms_Filled": {
+    "unit": "eabc"
+  },
+  "Meeting_Rooms_Outlined": {
+    "unit": "eaca"
+  },
+  "Merge_Cells": {
+    "unit": "eabd"
+  },
+  "Message_Filled": {
+    "unit": "eabe"
+  },
+  "Message_Outline": {
+    "unit": "eabf"
+  },
+  "Metric_Chart": {
+    "unit": "eac0"
+  },
+  "Monitoring": {
+    "unit": "eac1"
+  },
+  "More_Filled": {
+    "unit": "eac2"
+  },
+  "More_Horizontal": {
+    "unit": "eac3"
+  },
+  "More_Vertical": {
+    "unit": "eac5"
+  },
+  "Mozilla_Firefox": {
+    "unit": "eac6"
+  },
+  "Multi_Select_Filled": {
+    "unit": "eac7"
+  },
+  "Multi_Select_Outline": {
+    "unit": "eac8"
+  },
+  "Multi_Stop_Filled": {
+    "unit": "eacb"
+  },
+  "Multi_Stop_Outline": {
+    "unit": "eacc"
+  },
+  "Mute_Filled": {
+    "unit": "eacd"
+  },
+  "Mute_Outline": {
+    "unit": "eace"
+  },
+  "My_Account_Settings_Filled": {
+    "unit": "eb0e"
+  },
+  "My_Account_Settings_Outline": {
+    "unit": "eb1f"
+  },
+  "Next_Speaker": {
+    "unit": "eacf"
+  },
+  "Nonprofit_Filled": {
+    "unit": "ead0"
+  },
+  "Nonprofit_Outline": {
+    "unit": "ead1"
+  },
+  "Not_Equal_To": {
+    "unit": "ead2"
+  },
+  "Notice": {
+    "unit": "ead3"
+  },
+  "Notification_Filled": {
+    "unit": "ead4"
+  },
+  "Notification_Outline": {
+    "unit": "ead6"
+  },
+  "Numbered_List": {
+    "unit": "ead7"
+  },
+  "Numbers_Mini": {
+    "unit": "ead8"
+  },
+  "Object_Filled": {
+    "unit": "ead9"
+  },
+  "Object_Outline": {
+    "unit": "eada"
+  },
+  "Office_365": {
+    "unit": "eadb"
+  },
+  "Office_Filled": {
+    "unit": "eadc"
+  },
+  "Office_Outline": {
+    "unit": "eade"
+  },
+  "Office_Supplies_Filled": {
+    "unit": "eb07"
+  },
+  "Office_Supplies_Outline": {
+    "unit": "eb18"
+  },
+  "Offline_Filled": {
+    "unit": "eadf"
+  },
+  "Offline_Outline": {
+    "unit": "eae0"
+  },
+  "One_On_One_Filled": {
+    "unit": "eae1"
+  },
+  "One_On_One_Outline": {
+    "unit": "eae2"
+  },
+  "Online_Filled": {
+    "unit": "eae3"
+  },
+  "Online_Outline": {
+    "unit": "eae4"
+  },
+  "Open_Api": {
+    "unit": "eae5"
+  },
+  "Opera": {
+    "unit": "eae6"
+  },
+  "Opsgenie": {
+    "unit": "eae7"
+  },
+  "Options": {
+    "unit": "eae8"
+  },
+  "Origin_Filled": {
+    "unit": "eae9"
+  },
+  "Origin_Outline": {
+    "unit": "eaea"
+  },
+  "Out_Of_Plan_Filled": {
+    "unit": "eaeb"
+  },
+  "Out_Of_Plan_Outline": {
+    "unit": "eaec"
+  },
+  "Out_Of_Policy_Outline": {
+    "unit": "eaf6"
+  },
+  "Overnight_Filled": {
+    "unit": "eaed"
+  },
+  "Overnight_Outline": {
+    "unit": "eaee"
+  },
+  "Overtime_Policy_Filled": {
+    "unit": "eb08"
+  },
+  "Overtime_Policy_Outline": {
+    "unit": "eb19"
+  },
+  "Page_Break_Filled": {
+    "unit": "eaef"
+  },
+  "Page_Break_Outline": {
+    "unit": "eaf0"
+  },
+  "Page_Footer_Filled": {
+    "unit": "eaf1"
+  },
+  "Page_Footer_Outline": {
+    "unit": "eaf3"
+  },
+  "Page_Header_Filled": {
+    "unit": "eaf2"
+  },
+  "Page_Header_Outline": {
+    "unit": "eaf4"
+  },
+  "Page_Header__Footer_Filled": {
+    "unit": "eb6a"
+  },
+  "Page_Header__Footer_Outline": {
+    "unit": "eb7b"
+  },
+  "Paid_Seat_Selection_Filled": {
+    "unit": "eb6b"
+  },
+  "Paid_Seat_Selection_Outline": {
+    "unit": "eb7c"
+  },
+  "Password": {
+    "unit": "eaf5"
+  },
+  "Past_Step_Small_Filled": {
+    "unit": "eb26"
+  },
+  "Past_Step_Small_Outline": {
+    "unit": "eb37"
+  },
+  "Paste_Filled": {
+    "unit": "eaf7"
+  },
+  "Paste_Outline": {
+    "unit": "eaf8"
+  },
+  "Pause": {
+    "unit": "eaf9"
+  },
+  "Pause_Circle_Filled": {
+    "unit": "eafa"
+  },
+  "Pause_Circle_Outline": {
+    "unit": "eb04"
+  },
+  "Pay_Schedule_Dollar_Filled": {
+    "unit": "eb6c"
+  },
+  "Pay_Schedule_Dollar_Outlined": {
+    "unit": "eb8c"
+  },
+  "Pay_Schedule_Euro_Filled": {
+    "unit": "eb48"
+  },
+  "Pay_Schedule_Euro_Outline": {
+    "unit": "eb59"
+  },
+  "Pay_Schedule_Pound_Filled": {
+    "unit": "eb5a"
+  },
+  "Pay_Schedule_Pound_Outline": {
+    "unit": "eb6d"
+  },
+  "Pay_Schedule_Rupee_Filled": {
+    "unit": "eb5b"
+  },
+  "Pay_Schedule_Rupee_Outline": {
+    "unit": "eb6e"
+  },
+  "Pay_Schedule_Yen_Filled": {
+    "unit": "eb38"
+  },
+  "Pay_Schedule_Yen_Outline": {
+    "unit": "eb49"
+  },
+  "Payroll_And_Time_Dollar_Filled": {
+    "unit": "ebae"
+  },
+  "Payroll_Filled": {
+    "unit": "eafb"
+  },
+  "Payroll_Outline": {
+    "unit": "eafc"
+  },
+  "Payroll_Report_Dollar_Filled": {
+    "unit": "eb8d"
+  },
+  "Payroll_Report_Dollar_Outline": {
+    "unit": "eb9d"
+  },
+  "Payroll_Report_Euro_Filled": {
+    "unit": "eb6f"
+  },
+  "Payroll_Report_Euro_Outline": {
+    "unit": "eb7d"
+  },
+  "Payroll_Report_Pound_Filled": {
+    "unit": "eb7e"
+  },
+  "Payroll_Report_Pound_Outline": {
+    "unit": "eb8e"
+  },
+  "Payroll_Report_Rupee_Filled": {
+    "unit": "eb7f"
+  },
+  "Payroll_Report_Rupee_Outline": {
+    "unit": "eb8f"
+  },
+  "Payroll_Report_Yen_Filled": {
+    "unit": "eb5c"
+  },
+  "Payroll_Report_Yen_Outline": {
+    "unit": "eb70"
+  },
+  "Payroll_Time_Dollar_Outline": {
+    "unit": "eb80"
+  },
+  "Payroll_Time_Euro_Filled": {
+    "unit": "eb4a"
+  },
+  "Payroll_Time_Euro_Outline": {
+    "unit": "eb5d"
+  },
+  "Payroll_Time_Pound_Filled": {
+    "unit": "eb5e"
+  },
+  "Payroll_Time_Pound_Outline": {
+    "unit": "eb71"
+  },
+  "Payroll_Time_Rupee_Filled": {
+    "unit": "eb5f"
+  },
+  "Payroll_Time_Rupee_Outline": {
+    "unit": "eb72"
+  },
+  "Payroll_Time_Yen_Filled": {
+    "unit": "eb39"
+  },
+  "Payroll_Time_Yen_Outline": {
+    "unit": "eb4b"
+  },
+  "Paystub_Dollar": {
+    "unit": "eafd"
+  },
+  "Paystub_Euro": {
+    "unit": "eafe"
+  },
+  "Paystub_Pound": {
+    "unit": "eaff"
+  },
+  "Paystub_Rupee": {
+    "unit": "eb00"
+  },
+  "Paystub_Yen": {
+    "unit": "eb01"
+  },
+  "Pdf_Filled": {
+    "unit": "eb02"
+  },
+  "Pdf_Outline": {
+    "unit": "eb03"
+  },
+  "Pending_Approval_Filled": {
+    "unit": "eb3a"
+  },
+  "Pending_Approval_Outline": {
+    "unit": "eb4c"
+  },
+  "Pending_Circle_Filled": {
+    "unit": "eb15"
+  },
+  "Pending_Circle_Outline": {
+    "unit": "eb27"
+  },
+  "Pending_Filled": {
+    "unit": "eb05"
+  },
+  "Pending_Outline": {
+    "unit": "eb06"
+  },
+  "Peo_Filled": {
+    "unit": "eb09"
+  },
+  "Peo_Outline": {
+    "unit": "eb0a"
+  },
+  "Percent_Filled": {
+    "unit": "eb0b"
+  },
+  "Percent_Mini": {
+    "unit": "eb0c"
+  },
+  "Percent_Outline": {
+    "unit": "eb0f"
+  },
+  "Philippine_Peso": {
+    "unit": "eb10"
+  },
+  "Phone_Filled": {
+    "unit": "eb11"
+  },
+  "Phone_Outline": {
+    "unit": "eb12"
+  },
+  "Photo_Gallery_Filled": {
+    "unit": "eb13"
+  },
+  "Photo_Gallery_Outlined": {
+    "unit": "eb28"
+  },
+  "Pin_Left": {
+    "unit": "eb14"
+  },
+  "Pin_Right": {
+    "unit": "eb16"
+  },
+  "Plaid": {
+    "unit": "eb17"
+  },
+  "Platform": {
+    "unit": "eb1a"
+  },
+  "Play_Button_Filled": {
+    "unit": "eb1b"
+  },
+  "Play_Circle_Filled": {
+    "unit": "eb1c"
+  },
+  "Play_Circle_Outline": {
+    "unit": "eb1d"
+  },
+  "Play_Outline": {
+    "unit": "eb20"
+  },
+  "Point_In_Time_Filled": {
+    "unit": "eb21"
+  },
+  "Point_In_Time_Outline": {
+    "unit": "eb22"
+  },
+  "Polish_Zloty": {
+    "unit": "eb23"
+  },
+  "Pound": {
+    "unit": "eb24"
+  },
+  "Pound_Circle_Filled": {
+    "unit": "eb25"
+  },
+  "Pound_Circle_Outline": {
+    "unit": "eb29"
+  },
+  "Power_Button": {
+    "unit": "eb2a"
+  },
+  "Power_Filled": {
+    "unit": "eb2b"
+  },
+  "Power_Outline": {
+    "unit": "eb2c"
+  },
+  "Price_Cap": {
+    "unit": "eb2d"
+  },
+  "Provision_Users_Filled": {
+    "unit": "eb2e"
+  },
+  "Provision_Users_Offboard_Filled": {
+    "unit": "e007"
+  },
+  "Provision_Users_Offboard_Outline": {
+    "unit": "e018"
+  },
+  "Provision_Users_Onboard_Filled": {
+    "unit": "ebaf"
+  },
+  "Provision_Users_Onboard_Outline": {
+    "unit": "e008"
+  },
+  "Provision_Users_Outline": {
+    "unit": "eb3b"
+  },
+  "Public_Transportation_Filled": {
+    "unit": "eb90"
+  },
+  "Public_Transportation_Outline": {
+    "unit": "eb9e"
+  },
+  "Pulley": {
+    "unit": "eb2f"
+  },
+  "Push_Filled": {
+    "unit": "eb30"
+  },
+  "Push_Outline": {
+    "unit": "eb31"
+  },
+  "Qrcode_Filled": {
+    "unit": "eb32"
+  },
+  "Qrcode_Outline": {
+    "unit": "eb33"
+  },
+  "Question_Circle_Filled": {
+    "unit": "eb45"
+  },
+  "Question_Circle_Outline": {
+    "unit": "eb56"
+  },
+  "Quote_Filled": {
+    "unit": "eb34"
+  },
+  "Quote_Outline": {
+    "unit": "eb35"
+  },
+  "R_Pass_Filled": {
+    "unit": "eb36"
+  },
+  "Radio_Selected": {
+    "unit": "eb3c"
+  },
+  "Radio_Unselected": {
+    "unit": "eb3d"
+  },
+  "Ramp": {
+    "unit": "eb3e"
+  },
+  "Readiness_Filled": {
+    "unit": "eb3f"
+  },
+  "Readiness_Outline": {
+    "unit": "eb40"
+  },
+  "Rearrange": {
+    "unit": "eb41"
+  },
+  "Reassign_Computer_Filled": {
+    "unit": "eb86"
+  },
+  "Reassign_Computer_Outline": {
+    "unit": "eb97"
+  },
+  "Receipt_Filled": {
+    "unit": "eb42"
+  },
+  "Receipt_Outline": {
+    "unit": "eb43"
+  },
+  "Reciept_Attached_Correct_Amount_Filled": {
+    "unit": "e0bc"
+  },
+  "Reciept_Attached_Correct_Amount_Outline": {
+    "unit": "e0cd"
+  },
+  "Reciept_Attached_Wrong_Amount_Filled": {
+    "unit": "e09a"
+  },
+  "Reciept_Attached_Wrong_Amount_Outline": {
+    "unit": "e0ab"
+  },
+  "Reciept_Missing_Filled": {
+    "unit": "eb64"
+  },
+  "Reciept_Missing_Outline": {
+    "unit": "eb75"
+  },
+  "Recipes_Filled": {
+    "unit": "eb44"
+  },
+  "Recipes_Outline": {
+    "unit": "eb46"
+  },
+  "Recline_Extra_Filled": {
+    "unit": "eb47"
+  },
+  "Recline_Extra_Outline": {
+    "unit": "eb53"
+  },
+  "Recline_Normal_Filled": {
+    "unit": "eb54"
+  },
+  "Recline_Normal_Outline": {
+    "unit": "eb65"
+  },
+  "Recruiting": {
+    "unit": "eb4d"
+  },
+  "Recruiting_Filled": {
+    "unit": "eb4e"
+  },
+  "Recruiting_Outline": {
+    "unit": "eb4f"
+  },
+  "Recruiting_Outline1": {
+    "unit": "eb50"
+  },
+  "Redo": {
+    "unit": "eb51"
+  },
+  "Redo_Arrow": {
+    "unit": "eb52"
+  },
+  "Redo_Crossed_Outline": {
+    "unit": "eb55"
+  },
+  "Refresh": {
+    "unit": "eb57"
+  },
+  "Refresh_Crossed": {
+    "unit": "eb58"
+  },
+  "Remediation_Filled": {
+    "unit": "eb60"
+  },
+  "Remediation_Outline": {
+    "unit": "eb61"
+  },
+  "Remove_Circle_Filled": {
+    "unit": "eb62"
+  },
+  "Remove_Circle_Outline": {
+    "unit": "eb63"
+  },
+  "Report_Filled": {
+    "unit": "eb66"
+  },
+  "Report_Monitoring_Filled": {
+    "unit": "eb87"
+  },
+  "Report_Monitoring_Outline": {
+    "unit": "eb98"
+  },
+  "Report_Outline": {
+    "unit": "eb67"
+  },
+  "Reports_Outline": {
+    "unit": "eb68"
+  },
+  "Retail_Dollar_Filled": {
+    "unit": "eb69"
+  },
+  "Retail_Dollar_Outline": {
+    "unit": "eb74"
+  },
+  "Retail_Euro_Filled": {
+    "unit": "eb76"
+  },
+  "Retail_Euro_Outline": {
+    "unit": "eb77"
+  },
+  "Retail_Pound_Filled": {
+    "unit": "eb78"
+  },
+  "Retail_Pound_Outline": {
+    "unit": "eb79"
+  },
+  "Retail_Rupee_Filled": {
+    "unit": "eb7a"
+  },
+  "Retail_Rupee_Outline": {
+    "unit": "eb81"
+  },
+  "Retail_Yen_Filled": {
+    "unit": "eb82"
+  },
+  "Retail_Yen_Outline": {
+    "unit": "eb83"
+  },
+  "Return": {
+    "unit": "eb85"
+  },
+  "Return_Date": {
+    "unit": "eb88"
+  },
+  "Review_Cycles_Filled": {
+    "unit": "eb89"
+  },
+  "Review_Cycles_Outline": {
+    "unit": "eb8a"
+  },
+  "Rewind_10_Seconds": {
+    "unit": "eb8b"
+  },
+  "Richtext": {
+    "unit": "eb91"
+  },
+  "Rideshare_Filled": {
+    "unit": "eb92"
+  },
+  "Rideshare_Outline": {
+    "unit": "eb93"
+  },
+  "Rippling_Recommended_Filled": {
+    "unit": "e001"
+  },
+  "Rippling_Recommended_Outline": {
+    "unit": "e012"
+  },
+  "Risk_Filled": {
+    "unit": "eb94"
+  },
+  "Risk_Outline": {
+    "unit": "eb95"
+  },
+  "Roi_Filled": {
+    "unit": "eb96"
+  },
+  "Roi_Outline": {
+    "unit": "eb99"
+  },
+  "Role_Mini": {
+    "unit": "eb9a"
+  },
+  "Rpass_Outline": {
+    "unit": "eb9b"
+  },
+  "Rupee": {
+    "unit": "eb9c"
+  },
+  "Rupee_Circle_Filled": {
+    "unit": "eb9f"
+  },
+  "Rupee_Circle_Outline": {
+    "unit": "eba0"
+  },
+  "Sales_Filled": {
+    "unit": "eba1"
+  },
+  "Sales_Outline": {
+    "unit": "eba2"
+  },
+  "Salesforce": {
+    "unit": "eba3"
+  },
+  "Sandbox_Filled": {
+    "unit": "eba4"
+  },
+  "Sandbox_Outline": {
+    "unit": "eba5"
+  },
+  "Save_And_Exit_Filled": {
+    "unit": "eba6"
+  },
+  "Save_And_Exit_Outline": {
+    "unit": "eba7"
+  },
+  "Scale": {
+    "unit": "eba8"
+  },
+  "Scale_Filled": {
+    "unit": "eba9"
+  },
+  "Scale_Outline": {
+    "unit": "ebaa"
+  },
+  "Scale_Outlined": {
+    "unit": "ebab"
+  },
+  "Scatter_Chart": {
+    "unit": "ebac"
+  },
+  "Search_Filled": {
+    "unit": "ebad"
+  },
+  "Search_Outline": {
+    "unit": "ebb0"
+  },
+  "Seat_Basic_Filled": {
+    "unit": "ebb1"
+  },
+  "Seat_Basic_Outline": {
+    "unit": "ebb2"
+  },
+  "Seat_Luxury_Filled": {
+    "unit": "ebb3"
+  },
+  "Seat_Luxury_Outline": {
+    "unit": "ebb4"
+  },
+  "Seat_Plus_Filled": {
+    "unit": "ebb5"
+  },
+  "Seat_Plus_Outline": {
+    "unit": "ebb6"
+  },
+  "Seat_Premium_Filled": {
+    "unit": "ebb7"
+  },
+  "Seat_Premium_Outline": {
+    "unit": "ebb8"
+  },
+  "Seat_Standard_Filled": {
+    "unit": "ebb9"
+  },
+  "Seat_Standard_Outline": {
+    "unit": "ebba"
+  },
+  "Server_Filled": {
+    "unit": "ebbb"
+  },
+  "Server_Outline": {
+    "unit": "ebbc"
+  },
+  "Settings_Filled": {
+    "unit": "ebbd"
+  },
+  "Settings_Outline": {
+    "unit": "ebbe"
+  },
+  "Share_Filled": {
+    "unit": "ebbf"
+  },
+  "Share_Outline": {
+    "unit": "ebc0"
+  },
+  "Shared_Folder_Filled": {
+    "unit": "ebc1"
+  },
+  "Shared_Folder_Outline": {
+    "unit": "ebc2"
+  },
+  "Shield_Disabled_Filled": {
+    "unit": "ebc3"
+  },
+  "Shield_Disabled_Outline": {
+    "unit": "ebc4"
+  },
+  "Shield_Filled": {
+    "unit": "ebc5"
+  },
+  "Shield_Outline": {
+    "unit": "ebc6"
+  },
+  "Short_Answer": {
+    "unit": "ebc7"
+  },
+  "Signature_Filled": {
+    "unit": "ebc8"
+  },
+  "Signature_Outline": {
+    "unit": "ebc9"
+  },
+  "Skip": {
+    "unit": "ebca"
+  },
+  "Skip_Logic_Filled": {
+    "unit": "ebcb"
+  },
+  "Skip_Logic_Outline": {
+    "unit": "ebcc"
+  },
+  "Slack": {
+    "unit": "ebcd"
+  },
+  "Smartphone_Filled": {
+    "unit": "ebce"
+  },
+  "Sort": {
+    "unit": "ebcf"
+  },
+  "Sort_Ascending": {
+    "unit": "ebd0"
+  },
+  "Sort_Ascending_Mini": {
+    "unit": "ebd1"
+  },
+  "Sort_Descending": {
+    "unit": "ebd2"
+  },
+  "Sort_Descending_Mini": {
+    "unit": "ebd3"
+  },
+  "Sound_Filled": {
+    "unit": "ebd4"
+  },
+  "Sound_Outline": {
+    "unit": "ebd5"
+  },
+  "Spell_Check": {
+    "unit": "ebd6"
+  },
+  "Stacked_Bar_Chart_Filled": {
+    "unit": "ebd7"
+  },
+  "Stacked_Bar_Chart_Outline": {
+    "unit": "ebd8"
+  },
+  "Stacked_Coins_Filled": {
+    "unit": "ebd9"
+  },
+  "Stacked_Coins_Outline": {
+    "unit": "ebda"
+  },
+  "Stacked_V_Chart_Filled": {
+    "unit": "ebdb"
+  },
+  "Stacked_V_Chart_Outline": {
+    "unit": "ebdc"
+  },
+  "Star_Circle_Filled": {
+    "unit": "ebdd"
+  },
+  "Star_Circle_Outline": {
+    "unit": "ebde"
+  },
+  "Star_Filled": {
+    "unit": "ebdf"
+  },
+  "Star_Half": {
+    "unit": "ebe0"
+  },
+  "Star_Outline": {
+    "unit": "ebe1"
+  },
+  "Startups_Filled": {
+    "unit": "ebe2"
+  },
+  "Startups_Outline": {
+    "unit": "ebe3"
+  },
+  "Stop_At_Airport_Filled": {
+    "unit": "ebe4"
+  },
+  "Stop_At_Airport_Outline": {
+    "unit": "ebe5"
+  },
+  "Strong_No": {
+    "unit": "ebe6"
+  },
+  "Strong_Yes": {
+    "unit": "ebe7"
+  },
+  "Sum_Filled": {
+    "unit": "ebe8"
+  },
+  "Sum_Outline": {
+    "unit": "ebe9"
+  },
+  "Sun_Filled": {
+    "unit": "ebea"
+  },
+  "Sun_Outline": {
+    "unit": "ebeb"
+  },
+  "Survey_Dissatisfied_Filled": {
+    "unit": "e00f"
+  },
+  "Survey_Dissatisfied_Outline": {
+    "unit": "e020"
+  },
+  "Survey_Neutral_Filled": {
+    "unit": "ebec"
+  },
+  "Survey_Neutral_Outline": {
+    "unit": "ebed"
+  },
+  "Survey_Satisfied_Filled": {
+    "unit": "ebee"
+  },
+  "Survey_Satisfied_Outline": {
+    "unit": "ebef"
+  },
+  "Survey_Very_Dissatisfied_Filled": {
+    "unit": "e064"
+  },
+  "Survey_Very_Dissatisfied_Outline": {
+    "unit": "e075"
+  },
+  "Survey_Very_Satisfied_Filled": {
+    "unit": "e031"
+  },
+  "Survey_Very_Satisfied_Outline": {
+    "unit": "e042"
+  },
+  "Swap": {
+    "unit": "ebf0"
+  },
+  "Swiss_Franc": {
+    "unit": "ebf1"
+  },
+  "Table": {
+    "unit": "ebf2"
+  },
+  "Table_Column_Filled": {
+    "unit": "ebf3"
+  },
+  "Table_Column_Outline": {
+    "unit": "ebf4"
+  },
+  "Talent_Filled": {
+    "unit": "ebf5"
+  },
+  "Talent_Outline": {
+    "unit": "ebf6"
+  },
+  "Talent_Signal_Filled": {
+    "unit": "ebf7"
+  },
+  "Talent_Signal_Outline": {
+    "unit": "ebf8"
+  },
+  "Target_Pointer": {
+    "unit": "ebf9"
+  },
+  "Task_Filled": {
+    "unit": "ebfa"
+  },
+  "Task_Outline": {
+    "unit": "ebfb"
+  },
+  "Tasks_Filled": {
+    "unit": "ebfc"
+  },
+  "Tasks_Outline": {
+    "unit": "ebfd"
+  },
+  "Tax_Logo": {
+    "unit": "ebfe"
+  },
+  "Tax_Withholding_Filled": {
+    "unit": "ebff"
+  },
+  "Tax_Withholding_Outline": {
+    "unit": "ec00"
+  },
+  "Taxes_Filled": {
+    "unit": "ec01"
+  },
+  "Taxes_Outlined": {
+    "unit": "ec02"
+  },
+  "Technology_Filled": {
+    "unit": "ec03"
+  },
+  "Technology_Outline": {
+    "unit": "ec04"
+  },
+  "Text_Clip": {
+    "unit": "ec05"
+  },
+  "Text_Mini": {
+    "unit": "ec06"
+  },
+  "Text_Overflow": {
+    "unit": "ec07"
+  },
+  "Text_Wrap": {
+    "unit": "ec08"
+  },
+  "Thai_Baht": {
+    "unit": "ec09"
+  },
+  "Third_Party_Data": {
+    "unit": "ec0a"
+  },
+  "Thumb_Down_Filled": {
+    "unit": "ec0b"
+  },
+  "Thumb_Down_Outline": {
+    "unit": "ec0c"
+  },
+  "Thumb_Up_Filled": {
+    "unit": "ec0d"
+  },
+  "Thumb_Up_Outline": {
+    "unit": "ec0e"
+  },
+  "Thumbtack_Filled": {
+    "unit": "ec0f"
+  },
+  "Thumbtack_Outline": {
+    "unit": "ec10"
+  },
+  "Thunderbolt_Filled": {
+    "unit": "ec11"
+  },
+  "Thunderbolt_Outline": {
+    "unit": "ec12"
+  },
+  "Time_Filled": {
+    "unit": "ec13"
+  },
+  "Time_Outline": {
+    "unit": "ec14"
+  },
+  "Toggle_Off_Filled": {
+    "unit": "ec15"
+  },
+  "Toggle_Off_Outline": {
+    "unit": "ec16"
+  },
+  "Toggle_On_Filled": {
+    "unit": "ec17"
+  },
+  "Toggle_On_Outline": {
+    "unit": "ec18"
+  },
+  "Toilet": {
+    "unit": "ec19"
+  },
+  "Tools_Filled": {
+    "unit": "ec1a"
+  },
+  "Tools_Outline": {
+    "unit": "ec1b"
+  },
+  "Translate": {
+    "unit": "ec1c"
+  },
+  "Trash_Filled": {
+    "unit": "ec1d"
+  },
+  "Trash_Outline": {
+    "unit": "ec1e"
+  },
+  "Travel_Filled": {
+    "unit": "ec1f"
+  },
+  "Travel_Outline": {
+    "unit": "ec20"
+  },
+  "Trend_Report_Filled": {
+    "unit": "ec21"
+  },
+  "Trend_Report_Outline": {
+    "unit": "ec22"
+  },
+  "Trip": {
+    "unit": "ec23"
+  },
+  "Tvos": {
+    "unit": "ec24"
+  },
+  "Twitter": {
+    "unit": "ec25"
+  },
+  "Two_Factor_Device_Filled": {
+    "unit": "e00c"
+  },
+  "Two_Factor_Devices_Outline": {
+    "unit": "e02e"
+  },
+  "U_Shield_Fill": {
+    "unit": "ec26"
+  },
+  "U_Shield_Outline": {
+    "unit": "ec27"
+  },
+  "Un_Archive_Filled": {
+    "unit": "ec28"
+  },
+  "Un_Archive_Outline": {
+    "unit": "ec29"
+  },
+  "Unassign_Computer_Filled": {
+    "unit": "e02b"
+  },
+  "Unassign_Computer_Outline": {
+    "unit": "e03c"
+  },
+  "Undo": {
+    "unit": "ec2a"
+  },
+  "Unified_System_Filled": {
+    "unit": "ec2b"
+  },
+  "Unified_System_Outlined": {
+    "unit": "e01a"
+  },
+  "Uninstall_Filled": {
+    "unit": "ec2c"
+  },
+  "Uninstall_Outline": {
+    "unit": "ec2d"
+  },
+  "Unique_Id_Filled": {
+    "unit": "ec2e"
+  },
+  "Unique_Id_Outlined": {
+    "unit": "ec2f"
+  },
+  "Unlimited_Pto_Filled": {
+    "unit": "ec30"
+  },
+  "Unlimited_Pto_Outline": {
+    "unit": "ec31"
+  },
+  "Unlock_Filled": {
+    "unit": "ec32"
+  },
+  "Unlock_Outline": {
+    "unit": "ec33"
+  },
+  "Update_Address": {
+    "unit": "ec34"
+  },
+  "Upload": {
+    "unit": "ec35"
+  },
+  "User_Circle_Plus_Filled": {
+    "unit": "e01b"
+  },
+  "User_Circle_Plus_Outline": {
+    "unit": "e02c"
+  },
+  "User_Cog_Filled": {
+    "unit": "ec36"
+  },
+  "User_Cog_Outline": {
+    "unit": "ec37"
+  },
+  "User_Department_Filled": {
+    "unit": "e009"
+  },
+  "User_Department_Outline": {
+    "unit": "e01c"
+  },
+  "User_File_Filled": {
+    "unit": "ec38"
+  },
+  "User_File_Outline": {
+    "unit": "ec39"
+  },
+  "User_Filled": {
+    "unit": "ec3a"
+  },
+  "User_Laptop_Filled": {
+    "unit": "ec3b"
+  },
+  "User_Laptop_Outline": {
+    "unit": "ec3c"
+  },
+  "User_Outline": {
+    "unit": "ec3d"
+  },
+  "User_Ticket_Filled": {
+    "unit": "ec3e"
+  },
+  "User_Ticket_Outline": {
+    "unit": "ec3f"
+  },
+  "Users_Filled": {
+    "unit": "ec40"
+  },
+  "Users_Outline": {
+    "unit": "ec41"
+  },
+  "V2_Add_Circle_Filled": {
+    "unit": "e006"
+  },
+  "V2_Airline_Stops_Filled": {
+    "unit": "e039"
+  },
+  "V2_Airlines_Filled": {
+    "unit": "ec42"
+  },
+  "V2_Arrival": {
+    "unit": "ec43"
+  },
+  "V2_Arrow_Left": {
+    "unit": "ec44"
+  },
+  "V2_Arrow_Right": {
+    "unit": "ec45"
+  },
+  "V2_Auto_Filled": {
+    "unit": "ec46"
+  },
+  "V2_Bags_Filled": {
+    "unit": "ec47"
+  },
+  "V2_Cabin_Class": {
+    "unit": "ec48"
+  },
+  "V2_Carryon": {
+    "unit": "ec49"
+  },
+  "V2_Check": {
+    "unit": "ec4a"
+  },
+  "V2_Check_Circle_Filled": {
+    "unit": "e028"
+  },
+  "V2_Checkbox_Fill": {
+    "unit": "ec4b"
+  },
+  "V2_Checkbox_Intermediate": {
+    "unit": "e04a"
+  },
+  "V2_Checkbox_Outline": {
+    "unit": "ec4c"
+  },
+  "V2_Checkroom": {
+    "unit": "ec4d"
+  },
+  "V2_Chevron_Down": {
+    "unit": "ec4e"
+  },
+  "V2_Chevron_Left": {
+    "unit": "ec4f"
+  },
+  "V2_Chevron_Right": {
+    "unit": "ec50"
+  },
+  "V2_Chevron_Up": {
+    "unit": "ec51"
+  },
+  "V2_Close": {
+    "unit": "ec52"
+  },
+  "V2_Close_Circle_Filled": {
+    "unit": "e029"
+  },
+  "V2_Co2": {
+    "unit": "ec53"
+  },
+  "V2_Comfort_Filled": {
+    "unit": "ec54"
+  },
+  "V2_Copy": {
+    "unit": "ec55"
+  },
+  "V2_Crib": {
+    "unit": "ec56"
+  },
+  "V2_Departure_Filled": {
+    "unit": "ec57"
+  },
+  "V2_Edit_Filled": {
+    "unit": "ec58"
+  },
+  "V2_End_Date": {
+    "unit": "ec59"
+  },
+  "V2_Gallery": {
+    "unit": "ec5a"
+  },
+  "V2_Hotel_Filled": {
+    "unit": "ec5b"
+  },
+  "V2_Hotelclass": {
+    "unit": "ec5c"
+  },
+  "V2_Legroom_Filled": {
+    "unit": "ec5d"
+  },
+  "V2_Location": {
+    "unit": "ec5e"
+  },
+  "V2_Origin_Filled": {
+    "unit": "ec5f"
+  },
+  "V2_Out_Of_Policy": {
+    "unit": "ec60"
+  },
+  "V2_Power_Filled": {
+    "unit": "ec61"
+  },
+  "V2_Price_Cap": {
+    "unit": "ec62"
+  },
+  "V2_Public_Transportation_Filled": {
+    "unit": "e0c1"
+  },
+  "V2_Radio_Selected": {
+    "unit": "ec63"
+  },
+  "V2_Radio_Unselected": {
+    "unit": "ec64"
+  },
+  "V2_Remove_Circle_Filled": {
+    "unit": "e03a"
+  },
+  "V2_Search_Outline": {
+    "unit": "ec65"
+  },
+  "V2_Send": {
+    "unit": "ec66"
+  },
+  "V2_Stairs_Filled": {
+    "unit": "ec67"
+  },
+  "V2_Start_Date": {
+    "unit": "ec68"
+  },
+  "V2_Stops": {
+    "unit": "ec69"
+  },
+  "V2_Swap": {
+    "unit": "ec6a"
+  },
+  "V2_Thunderbolt_Filled": {
+    "unit": "e017"
+  },
+  "V2_Time_Filled": {
+    "unit": "ec6b"
+  },
+  "V2_Toilet": {
+    "unit": "ec6c"
+  },
+  "V2_Travel_Filled": {
+    "unit": "ec6d"
+  },
+  "V2_Wifi": {
+    "unit": "ec6e"
+  },
+  "Variable": {
+    "unit": "ec6f"
+  },
+  "Variable_Selector_Mini": {
+    "unit": "e02a"
+  },
+  "Vault_Filled": {
+    "unit": "ec70"
+  },
+  "Vault_Outline": {
+    "unit": "ec71"
+  },
+  "Vendor_Filled": {
+    "unit": "ec72"
+  },
+  "Vendor_Outline": {
+    "unit": "ec73"
+  },
+  "Venn_Diagram_And_Filled": {
+    "unit": "e03b"
+  },
+  "Venn_Diagram_And_Outline": {
+    "unit": "e04b"
+  },
+  "Venn_Diagram_Or_Filled": {
+    "unit": "e02d"
+  },
+  "Venn_Diagram_Or_Outline": {
+    "unit": "e03d"
+  },
+  "Verified_Check_Filled": {
+    "unit": "e019"
+  },
+  "Verified_Check_Outline": {
+    "unit": "e02f"
+  },
+  "Video_Filled": {
+    "unit": "ec74"
+  },
+  "Video_Outline": {
+    "unit": "ec75"
+  },
+  "Visa_Logo": {
+    "unit": "ec76"
+  },
+  "Vpn_Filled": {
+    "unit": "ec77"
+  },
+  "Vpn_Outline": {
+    "unit": "ec78"
+  },
+  "Warning_Circle_Filled": {
+    "unit": "e036"
+  },
+  "Warning_Circle_Outline": {
+    "unit": "e047"
+  },
+  "Warning_Triangle_Filled": {
+    "unit": "e058"
+  },
+  "Warning_Triangle_Outline": {
+    "unit": "e069"
+  },
+  "Wellness_And_Meditation_Classes_Filled": {
+    "unit": "e157"
+  },
+  "Wellness_And_Meditation_Classes_Outline": {
+    "unit": "e168"
+  },
+  "Wifi": {
+    "unit": "ec79"
+  },
+  "Window_Pop_Out_Filled": {
+    "unit": "e037"
+  },
+  "Window_Pop_Out_Outline": {
+    "unit": "e048"
+  },
+  "Windows": {
+    "unit": "ec7a"
+  },
+  "Windows_Edge": {
+    "unit": "ec7b"
+  },
+  "Windows_Smile": {
+    "unit": "ec7c"
+  },
+  "Wine_Club_Filled": {
+    "unit": "ec7d"
+  },
+  "Wine_Outline": {
+    "unit": "ec7e"
+  },
+  "Withdraw_Filled": {
+    "unit": "ec7f"
+  },
+  "Withdraw_Outline": {
+    "unit": "ec80"
+  },
+  "Work_From_Home_Stipend_Filled": {
+    "unit": "e0be"
+  },
+  "Work_From_Home_Stipend_Outline": {
+    "unit": "e0cf"
+  },
+  "Wrench_Filled": {
+    "unit": "ec81"
+  },
+  "Wrench_Outline": {
+    "unit": "ec82"
+  },
+  "Xml_Filled": {
+    "unit": "ec83"
+  },
+  "Xml_Outline": {
+    "unit": "ec84"
+  },
+  "Yen": {
+    "unit": "ec85"
+  },
+  "Yen_Circle_Filled": {
+    "unit": "e030"
+  },
+  "Yen_Circle_Outline": {
+    "unit": "e041"
+  },
+  "Yubikey": {
+    "unit": "ec86"
+  },
+  "Zendesk": {
+    "unit": "ec87"
+  },
+  "Zip_Filled": {
+    "unit": "ec88"
+  },
+  "Zip_Outline": {
+    "unit": "ec89"
+  },
+  "Zoom": {
+    "unit": "ec8a"
+  },
+  "Zoom_In_Filled": {
+    "unit": "e01d"
+  },
+  "Zoom_In_Outline": {
+    "unit": "e032"
+  },
+  "Zoom_Out_Filled": {
+    "unit": "e033"
+  },
+  "Zoom_Out_Outline": {
+    "unit": "e03e"
+  }
+}
