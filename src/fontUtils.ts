@@ -2,11 +2,9 @@ import * as svg2ttf from 'svg2ttf';
 import { parse, Font } from 'opentype.js';
 
 export async function generateTTF(svgFont: string): Promise<Uint8Array> {
-    // Log the SVG font data to see Unicode values before TTF conversion
     const unicodeMatches = svgFont.match(/unicode="([^"]+)"/g);
     console.log('Unicode values in SVG before TTF conversion:', unicodeMatches);
 
-    // Extract and log each Unicode value separately
     const glyphMatches = svgFont.match(/<glyph[^>]*>/g) || [];
     glyphMatches.forEach(glyph => {
         const nameMatch = glyph.match(/glyph-name="([^"]+)"/);
@@ -23,7 +21,6 @@ export async function generateTTF(svgFont: string): Promise<Uint8Array> {
         version: '1.0'
     });
 
-    // Log the buffer size to ensure data is being generated
     console.log('TTF buffer size:', ttf.buffer.length);
 
     return new Uint8Array(ttf.buffer);

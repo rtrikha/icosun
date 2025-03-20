@@ -35,7 +35,6 @@ export async function exportSVGFromNode(nodeInfo: ExportNodeInfo, unicodeMap: Un
 
         const svgString = Array.from(svg).map(byte => String.fromCharCode(byte)).join('');
 
-        // Ensure we're using the exact same unicode value throughout
         const unicode = unicodeMap[name].unit;
 
         if (!unicode) {

@@ -36,7 +36,6 @@ ${glyphs.map(glyph => {
 </defs>
 </svg>`;
 
-    // Log the final SVG to verify Unicode values
     console.log('Generated SVG font with Unicode values:',
         fontTemplate.match(/unicode="([^"]+)"/g)
     );
